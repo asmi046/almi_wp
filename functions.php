@@ -1,7 +1,25 @@
 <?php
-include_once('options_page.php');
 
-add_theme_support( 'woocommerce' );
+//----Подключене carbon fields
+
+include "carbon-fields/carbon-fields-plugin.php";
+
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
+add_action( 'carbon_register_fields', 'crb_attach_theme_options' ); // Для версии 1.6 и ниже
+function crb_attach_theme_options() {
+	Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+		->add_fields( array(
+			Field::make( 'text', 'crb_text', 'Text Field' ),
+		) );
+}
+
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+	require_once( 'vendor/autoload.php' );
+	\Carbon_Fields\Carbon_Fields::boot();
+}
 
 register_nav_menus( array(
 	'header_menu' => 'Главное меню'
