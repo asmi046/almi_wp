@@ -1,7 +1,7 @@
 <?php
 
 //----Подключене carbon fields
-
+//----Инструкции по подключению полей см. в комментариях themes-fields.php
 include "carbon-fields/carbon-fields-plugin.php";
 
 use Carbon_Fields\Container;
