@@ -111,7 +111,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 				wp_die(json_encode(array("send" => true )));
 			}
 			else {
-				wp_die(json_encode(array("send" => false )));
+				wp_die( 'Ошибка отправки!', '', 403 );
 			}
 	*/
 	
