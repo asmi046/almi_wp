@@ -1,5 +1,8 @@
 <?php
 
+define("COMPANY_NAME", "<Вписываем имя компании>");
+define("MAIL_RESEND", "<Вписываем почтовый ящик который подставляется в шапку письма>");
+
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php
 include "carbon-fields/carbon-fields-plugin.php";
@@ -71,6 +74,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		) );
 	}
 
+	// Заготовка для вызова ajax
 	
 	add_action( 'wp_ajax_aj_fnc', 'aj_fnc' );
 	add_action( 'wp_ajax_nopriv_aj_fnc', 'aj_fnc' );
@@ -93,14 +97,22 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 	/* Отправка почты
 		
 			$headers = array(
-				'From: Сайт Кредит-Консалт <noreply@kredit-konsalt.ru>',
+				'From: Сайт '.COMPANY_NAME.' <MAIL_RESEND>',
 				'content-type: text/html',
 			);
 		
 			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
-			if (wp_mail(array('info@kredit-konsalt.ru','asmi046@gmail.com'), 'Заказ обратного звонка', '<strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["phone"], $headers))
-				wp_die("<span style = 'color:green;'>Мы свяжемся с Вами в ближайшее время.</span>");
-			else wp_die("<span style = 'color:red;'>Сервис недоступен попробуйте позднее.</span>");
+			
+			$adr_to_send = <Присваиваем поле карбона c адресами для отправки>;
+			$mail_content = "<Тело письма>";
+			$mail_them = "<Тема письма>";
+
+			if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers)) {
+				wp_die(json_encode(array("send" => true )));
+			}
+			else {
+				wp_die(json_encode(array("send" => false )));
+			}
 	*/
 	
 	
