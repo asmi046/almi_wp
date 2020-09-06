@@ -14,5 +14,14 @@ use Carbon_Fields\Field;
 Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
 		->add_fields( array(
 			Field::make( 'text', 'crb_text', 'Text Field' ),
-        ) );
+		) );
+		
+Container::make('post_meta', 'product', 'Доп поля')
+	->show_on_template('single-product.php')
+	->add_fields(array(
+		Field::make('text', 'amazon_link', 'Ссылка на Амазон'),
+		Field::make('text_rich', 'short_descr', 'Краткое описание'),
+		Field::make('text', 'rating', 'Рейтинг'),
+		Field::make('text', 'price', 'Цена'),
+	));
 ?>
