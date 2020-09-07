@@ -4,7 +4,7 @@
                 <div class="brend-link_wr">
                     <div class="brend-link tb">
                         <span class="brend-link__logo tbc vM">
-                            <img src="image/Little_Almi-logo-footer.svg" alt="Little_Almi footer logo">
+                            <img src="<?php echo get_template_directory_uri();?>/image/Little_Almi-logo-footer.svg" alt="Little_Almi footer logo">
                         </span>
                         <a href="#" class="brend-link__text tbc vM">
                             Products Little Almi
@@ -14,7 +14,7 @@
                 <div class="brend-link_wr">
                     <div class="brend-link tb">
                         <span class="brend-link__logo tbc vM">
-                            <img src="image/PET'ALMI-logo-footer.svg" alt="PET'ALMI footer logo">
+                            <img src="<?php echo get_template_directory_uri();?>/image/PET'ALMI-logo-footer.svg" alt="PET'ALMI footer logo">
                         </span>
                         <a href="#" class="brend-link__text tbc vM">
                             Products PET'ALMI
