@@ -4,6 +4,8 @@ function isEmail(email) {
 	return regex.test(email);
 }
 
+/*Test*/ 
+
 jQuery(document).ready(function() {
 	
 	// Сразу маскируем все поля телефонов
