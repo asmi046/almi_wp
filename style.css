@@ -89,7 +89,7 @@ td{
 }
 .box-modal_close { position: absolute; right: 10px; top: 6px; font-size: 11px; line-height: 15px; color: #999; cursor: pointer; }
 .box-modal_close:hover { color: #666; }
-@import "./css/style.css" screen; 
+
 @media screen and (max-width:1024px), handheld{ }
 @media screen and (max-width:980px), handheld{ }
 @media screen and (max-width:800px), handheld{ }
