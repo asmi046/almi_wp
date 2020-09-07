@@ -9,8 +9,8 @@
                                 <div class="birka">
                                     Best Seller
                                 </div>
-                                <div class="catalog__item__img cover" style="background-image: url(image/products-for-pets-1.jpg)">
-                                    <img src="img/catalog__item__img-spacer.png" alt="" class="spacer">
+                                <div class="catalog__item__img cover" style="background-image: url(<?php echo get_template_directory_uri();?>/image/products-for-pets-1.jpg)">
+                                    <img src="<?php echo get_template_directory_uri();?>/img/catalog__item__img-spacer.png" alt="" class="spacer">
                                 </div>
                                 <p>
                                     URPOWER Upgraded Dog Seat Belt 2 Pack Car Seat Belt for Dogs, Cats and Pets
@@ -33,8 +33,8 @@
 
                         <div class="catalog__item__wr">
                             <div class="catalog__item">
-                                <div class="catalog__item__img cover" style="background-image: url(image/products-for-pets-2.jpg)">
-                                    <img src="img/catalog__item__img-spacer.png" alt="" class="spacer">
+                                <div class="catalog__item__img cover" style="background-image: url(<?php echo get_template_directory_uri();?>/image/products-for-pets-2.jpg)">
+                                    <img src="<?php echo get_template_directory_uri();?>/img/catalog__item__img-spacer.png" alt="" class="spacer">
                                 </div>
                                 <p>
                                     URPOWER Dog Seat Cover Car Seat Cover for Pets 100% Waterproof Pet Seat Cover Hammock 600D Heavy Duty
@@ -57,8 +57,8 @@
 
                         <div class="catalog__item__wr">
                             <div class="catalog__item">
-                                <div class="catalog__item__img cover" style="background-image: url(image/products-for-pets-3.jpg)">
-                                    <img src="img/catalog__item__img-spacer.png" alt="" class="spacer">
+                                <div class="catalog__item__img cover" style="background-image: url(<?php echo get_template_directory_uri();?>/image/products-for-pets-3.jpg)">
+                                    <img src="<?php echo get_template_directory_uri();?>/img/catalog__item__img-spacer.png" alt="" class="spacer">
                                 </div>
                                 <p>
                                     Dog Treat Pouch, Dog Treat Bag for Training Small to Large Dogs, Easily Carries Pet Toys, Kibble, Treats, Built-in Poop Bag Dispenser
@@ -84,8 +84,8 @@
                                 <div class="birka">
                                     2 Packs
                                 </div>
-                                <div class="catalog__item__img cover" style="background-image: url(image/products-for-pets-4.jpg)">
-                                    <img src="img/catalog__item__img-spacer.png" alt="" class="spacer">
+                                <div class="catalog__item__img cover" style="background-image: url(<?php echo get_template_directory_uri();?>/image/products-for-pets-4.jpg)">
+                                    <img src="<?php echo get_template_directory_uri();?>/img/catalog__item__img-spacer.png" alt="" class="spacer">
                                 </div>
                                 <p>
                                     URPOWER Upgraded Dog Seat Belt 2 Pack Car Seat Belt for Dogs, Cats and Pets
