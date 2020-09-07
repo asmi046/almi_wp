@@ -4,6 +4,21 @@
                 <div class="catalog rL hid">
                     <div class="row rL hid">
 
+                    <?php
+                    if ( have_posts() ) :
+                        while ( have_posts() ) :
+                            the_post();
+                            get_template_part( 'template-parts/product-loop' );
+                        endwhile;
+
+                        the_posts_pagination();
+
+                    else :
+
+                        get_template_part( 'template-parts/content', 'none' );
+
+                    endif;
+                    ?>
                         <div class="catalog__item__wr">
                             <div class="catalog__item">
                                 <div class="birka">
