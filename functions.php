@@ -99,7 +99,14 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		}
 	}
 	
-	
+	function main_menu() {
+		wp_nav_menu(array(
+			'theme_location' => 'header_menu',
+			'container' => 'nav',
+			'container_class' => 'main-menu inb vT'
+		));
+	}
+
 	/* Отправка почты
 		
 			$headers = array(

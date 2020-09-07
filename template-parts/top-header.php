@@ -6,6 +6,7 @@
 <div class="nav-panel clearfix">
     <button class="close-btn abs close-menu-btn"></button>
     <a href="#" class="home-link inb vT"></a>
+    <?php main_menu();?>
     <nav class="main-menu inb vT">
         <ul>
             <li><a href="#">Little ALMI</a></li>
