@@ -228,7 +228,7 @@
                     'prev_text'    => 'Previous',
                     'next_text'    => 'Next',
                 );
-                        the_posts_pagination();?>
+                        the_posts_pagination($args);?>
                 <div class="pagination clearfix">
                     <ul>
                         <li class="pagination__step pagination__prev">
