@@ -1,13 +1,8 @@
 <?php
 /**
  * Template Name: Продукт
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
+ *Template Name: Full-width layout
+ * Template Post Type: post
  */
 
 get_header(); ?>
