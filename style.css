@@ -1672,6 +1672,11 @@ h2 {
           background-position: center left;
           background-size: contain; }
           .pagination .prev.page-numbers,
+          .pagination .next.page-numbers {
+            position: relative;
+            background-color: transparent;
+          }
+          .pagination .prev.page-numbers,
         .pagination ul li.pagination__prev a {
           box-sizing: border-box;
           padding-left: 22px; }
