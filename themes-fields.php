@@ -13,7 +13,10 @@ use Carbon_Fields\Field;
 
 Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
 		->add_fields( array(
-			Field::make('text', 'email', 'Email'),
+			Field::make('text', 'email', 'Email')
+				->set_width(30),
+			Field::make('text', 'tel', 'Телефон')
+				->set_width(30),
 			Field::make( 'text', 'crb_text', 'Text Field' ),
 		) );
 		

@@ -18,13 +18,13 @@
         </ul>
     </nav> -->
     <div class="contacts-elem fright">
-        <a href="email:info@almi.ru" class="contacts-elem__email inb vT">info@almi.ru</a>
+        <a href="mailto:<?php echo carbon_get_theme_option('email');?>" class="contacts-elem__email inb vT"><?php echo carbon_get_theme_option('email');?></a>
 
         <div class="phone-box inb vT rL desktop">
-            <span>8 800 555 44 41</span>
+            <span><?php echo carbon_get_theme_option('tel');?></span>
         </div>
 
-        <a href="tel:88005554441" class="phone-box inb vT rL mobil">
+        <a href="tel:<?php echo str_replace(array('(', ')', '-', ' '), '', carbon_get_theme_option('tel'));?>" class="phone-box inb vT rL mobil">
             <span>8 800 555 44 41</span>
         </a>
     </div>
