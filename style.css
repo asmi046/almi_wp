@@ -1642,6 +1642,7 @@ h2 {
         color: #1A1718; }
         .pagination ul li a:hover {
           text-decoration: none; }
+        .pagination .page-numbers,
       .pagination ul li.pagination__circle a, .pagination ul li.pagination__circle span {
         display: inline-block;
         width: 29px;
