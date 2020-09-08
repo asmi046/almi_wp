@@ -22,14 +22,14 @@
                         <li class="star-empty star-track__item"></li>
                     <?php endif;
                 endif;?>
-            <?php endforeach;?>
+            <?php $inc++; endforeach;?>
             <!-- <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
             <li class="star-half star-track__item"></li>
             <li class="star-empty star-track__item"></li> -->
         </ul>
-        <span class="catalog__item__price db"><?php echo carbon_get_the_post_meta('price');?></span>
+        <span class="catalog__item__price db">$<?php echo carbon_get_the_post_meta('price');?></span>
         <div class="catalog__link-box">
             Buy on
             <a href="<?php echo carbon_get_the_post_meta('amazon_link');?>" class="amazon-link"></a>
