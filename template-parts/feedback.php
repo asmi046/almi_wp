@@ -11,6 +11,6 @@
         </div>
     </div>
     <div class="feedback__decor feedback__decor__pets"> 
-        <img src="<?php get_template_directory_uri();?>/img/enimal.png" alt="pets" class="spacer">
+        <img src="<?php echo get_template_directory_uri();?>/img/enimal.png" alt="pets" class="spacer">
     </div>
 </form>
