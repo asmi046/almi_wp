@@ -13,8 +13,6 @@
                             get_template_part( 'template-parts/product-loop' );
                         endwhile;
 
-                        the_posts_pagination();
-
                     else :
 
                         get_template_part( 'template-parts/content', 'none' );
@@ -225,6 +223,8 @@
 
                     </div>
                 </div>
+                <?php 
+                        the_posts_pagination();?>
                 <div class="pagination clearfix">
                     <ul>
                         <li class="pagination__step pagination__prev">
