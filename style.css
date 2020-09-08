@@ -1653,6 +1653,7 @@ h2 {
         transition: all 300ms; }
         .pagination ul li.pagination__circle a:hover, .pagination ul li.pagination__circle span:hover {
           background-color: #EB4125; }
+          .pagination .page-numbers.current,
       .pagination ul li.pagination__current span {
         background-color: #EB4125; }
       .pagination ul li.pagination__prev {
