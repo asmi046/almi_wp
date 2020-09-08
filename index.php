@@ -21,7 +21,7 @@
 
                     endif;
                     ?>
-                        <div class="catalog__item__wr">
+                        <!-- <div class="catalog__item__wr">
                             <div class="catalog__item">
                                 <div class="birka">
                                     Best Seller
@@ -221,7 +221,7 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
