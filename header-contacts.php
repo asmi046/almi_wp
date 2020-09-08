@@ -27,13 +27,13 @@
                         <tr>
                             <th>Telephone:</th>
                             <td>
-                                <a href="tel:88005554441" class="mobil">8 800 555 44 41</a>
-                                <span class="desktop">8 800 555 44 41</span>
+                                <a href="tel:<?php echo str_replace(array('(', ')', '-', ' '), '', carbon_get_theme_option('tel'));?>" class="mobil"><?php echo carbon_get_theme_option('tel');?></a>
+                                <span class="desktop"><?php echo carbon_get_theme_option('tel');?></span>
                             </td>
                         </tr>
                         <tr>
                             <th>Email:</th>
-                            <td><a href="email:info@almi.ru" class="link">info@almi.ru</a></td>
+                            <td><a href="email:<?php echo carbon_get_theme_option('email');?>" class="link"><?php echo carbon_get_theme_option('email');?></a></td>
                         </tr>
                     </table>
                 </div>
