@@ -13,7 +13,7 @@
 <!-- <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
 
 <!-- Меню -->
-<?php wp_nav_menu( array('menu' => 'Главное меню', 'container' => false )); ?>
+<?php //wp_nav_menu( array('menu' => 'Главное меню', 'container' => false )); ?>
 
 <!-- Подключение  модальных окон-->
 <? include "modal-win.php";?>
