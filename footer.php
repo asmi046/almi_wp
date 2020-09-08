@@ -24,21 +24,22 @@
             </div>
             <div class="contacts-elem fright">
                 <div class="phone-box inb vT rL desktop">
-                    <span>8 800 555 44 41</span>
+                    <span><?php echo carbon_get_theme_option('tel');?></span>
                 </div>
 
-                <a href="tel:+88005554441" class="phone-box inb vT rL mobil">
-                    <span>8 800 555 44 41</span>
+                <a href="tel:<?php echo str_replace(array('(', ')', '-', ' '), '', carbon_get_theme_option('tel'));?>" class="phone-box inb vT rL mobil">
+                    <span><?php echo carbon_get_theme_option('tel');?></span>
                 </a>
             </div>
-            <nav class="footer-menu rL hid">
+            <!-- <nav class="footer-menu rL hid">
                 <ul>
                     <li><a href="#">Payment and delivery</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Reviews</a></li>
                     <li><a href="#">Contacts</a></li>
                 </ul>
-            </nav>
+            </nav> -->
+            <?php footer_menu();?>
             <span class="db copyright">
                 © 2020 ALMI
             </span>

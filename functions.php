@@ -105,6 +105,13 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 			'container_class' => 'main-menu inb vT'
 		));
 	}
+	function footer_menu() {
+		wp_nav_menu(array(
+			'theme_location' => 'header_menu',
+			'container' => 'nav',
+			'container_class' => 'footer-menu rL hid'
+		));
+	}
 	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
 	function my_navigation_template( $template, $class ){
 		return '
