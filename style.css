@@ -1675,6 +1675,7 @@ h2 {
           .pagination .next.page-numbers {
             position: relative;
             background-color: transparent;
+            width: auto;
           }
           .pagination .prev.page-numbers,
         .pagination ul li.pagination__prev a {
