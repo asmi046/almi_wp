@@ -105,7 +105,14 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 			'container_class' => 'main-menu inb vT'
 		));
 	}
-
+	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+	function my_navigation_template( $template, $class ){
+		return '
+		<nav class="navigation %1$s" role="navigation">
+			<div class="nav-links pagination clearfix">%3$s</div>
+		</nav>    
+		';
+	}
 	/* Отправка почты
 		
 			$headers = array(
