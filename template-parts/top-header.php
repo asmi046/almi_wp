@@ -25,7 +25,7 @@
         </div>
 
         <a href="tel:<?php echo str_replace(array('(', ')', '-', ' '), '', carbon_get_theme_option('tel'));?>" class="phone-box inb vT rL mobil">
-            <span>8 800 555 44 41</span>
+            <span><?php echo carbon_get_theme_option('tel');?></span>
         </a>
     </div>
 
