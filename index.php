@@ -225,8 +225,8 @@
                 </div>
                 <?php 
                 $args = array(
-                    'prev_text'    => __('Previous'),
-                    'next_text'    => __('Next'),
+                    'prev_text'    => 'Previous',
+                    'next_text'    => 'Next',
                 );
                         the_posts_pagination();?>
                 <div class="pagination clearfix">
