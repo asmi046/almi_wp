@@ -14,28 +14,33 @@ jQuery(document).ready(function() {
 
 	// Типовой скрипт для отправки сообщений на почту
 
-	jQuery("#clsubmit").click(function(){ 
+	jQuery(".uniSendBtn").click(function(e){ 
 
 		e.preventDefault();
-
-		var  jqXHR = jQuery.post(
-					allAjax.ajaxurl,
-					{
-						action: 'send_mail',		
-						nonce: allAjax.nonce,
-						formsubject: jQuery("#formsubject").val(),
-					}
+		var name = $(this).siblings('input[name=name]').val();
+		var tel = $(this).siblings('input[name=tel]').val();
+		if((tel == "")||(tel.indexOf("_")>0)) {
+			$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
+		} else {
+			var  jqXHR = jQuery.post(
+				allAjax.ajaxurl,
+				{
+					action: 'send_mail',		
+					nonce: allAjax.nonce,
+					formsubject: jQuery("#formsubject").val(),
+				}	
+			);
 					
-		);
-				
-				
-		jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-					document.location.href = 'https://osagoprofi.su/stranica-blagodarnosti';	
-		});
-				
-		jqXHR.fail(function (responce) {
-					jQuery('#messgeModal #lineMsg').html("Произошла ошибка. Попробуйте позднее.");
-					jQuery('#messgeModal').arcticmodal();
-		});
+					
+			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
+				document.location.href = 'https://osagoprofi.su/stranica-blagodarnosti';	
+			});
+					
+			jqXHR.fail(function (responce) {
+				jQuery('#messgeModal #lineMsg').html("Произошла ошибка. Попробуйте позднее.");
+				jQuery('#messgeModal').arcticmodal();
+			});
+
+		}
 	});
 });

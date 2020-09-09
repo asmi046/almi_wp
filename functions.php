@@ -120,6 +120,45 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		</nav>    
 		';
 	}
+
+	
+add_action( 'wp_ajax_send', 'send_mail' );
+add_action( 'wp_ajax_nopriv_send', 'send_mail' );
+
+function send_mail() {
+  if ( empty( $_REQUEST['nonce'] ) ) {
+	wp_die( '0' );
+  }
+  
+  if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+	
+	$headers = array(
+	  'From: Сайт Wood White <noreply@propuska-mkad-ttk-sk.ru>',
+	  'content-type: text/html',
+	);
+  
+	$headers = array(
+		'From: Сайт '.COMPANY_NAME.' <MAIL_RESEND>',
+		'content-type: text/html',
+	);
+
+	add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+	
+	$adr_to_send = carbon_get_theme_option('email_send');
+	$mail_content = '<strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"];
+	$mail_them = "<Тема письма>";
+
+	if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers)) {
+		wp_die(json_encode(array("send" => true )));
+	}
+	else {
+		wp_die( 'Ошибка отправки!', '', 403 );
+	}
+	
+  } else {
+	wp_die( 'НО-НО-НО!', '', 403 );
+  }
+}
 	/* Отправка почты
 		
 			$headers = array(

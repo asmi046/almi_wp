@@ -15,6 +15,8 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
 		->add_fields( array(
 			Field::make('text', 'email', 'Email')
 				->set_width(30),
+				Field::make('text', 'email_send', 'Email для отправки')
+					->set_width(30),
 			Field::make('text', 'tel', 'Телефон')
 				->set_width(30),
 			Field::make('text', 'address', 'Адрес')

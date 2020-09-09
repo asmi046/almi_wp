@@ -5,9 +5,9 @@
             Leave a request and our specialists will answer all your questions
         </span>
         <div class="field-box rL">
-            <input type="text" class="inputbox" placeholder="Name">
-            <input type="tel" class="inputbox" placeholder="Telephone">
-            <input type="submit" class="btn" value="Send message">
+            <input type="text" class="inputbox" name="name" placeholder="Name">
+            <input type="tel" class="inputbox" name="tel" placeholder="Telephone">
+            <a href="#" type="submit" class="btn uniSendBtn" value="Send message">
         </div>
     </div>
     <div class="feedback__decor feedback__decor__pets"> 
