@@ -1621,6 +1621,7 @@ h2 {
     background-image: url(img/star-empty.svg); }
 .nav-links {
   float: right;
+  text-align: right;
 }
 .pagination {
   width: 100%;
