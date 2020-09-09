@@ -13,7 +13,7 @@ get_header('contacts');?>
 
                     function init () {
                     
-                        var myMap = new ymaps.Map("mapLine", {
+                        var myMap = new ymaps.Map("map", {
                                 center: <?php echo carbon_get_theme_option('mkad_map_point') ?>,
                                 zoom: 14,
                                 controls: ['zoomControl']
