@@ -31,9 +31,8 @@ jQuery(document).ready(function($) {
 				}	
 			);
 					
-					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-				document.location.href = 'https://osagoprofi.su/stranica-blagodarnosti';	
+				document.location.href = 'https://almi.asmi-studio.ru/stranicza-blagodarnosti/';	
 			});
 					
 			jqXHR.fail(function (responce) {
