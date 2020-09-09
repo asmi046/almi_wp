@@ -22,7 +22,7 @@
                     <table class="contacts-table">
                         <tr>
                             <th>Address:</th>
-                            <td>Address: Address: Address:</td>
+                            <td><?php echo carbon_get_theme_option('address');?></td>
                         </tr>
                         <tr>
                             <th>Telephone:</th>
