@@ -6,7 +6,7 @@ function isEmail(email) {
 
 /*Test*/ 
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 	
 	// Сразу маскируем все поля телефонов
 	var inputmask_phone = {"mask": "+7(999)999-99-99"};
