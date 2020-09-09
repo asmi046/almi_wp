@@ -25,7 +25,7 @@ get_header('contacts');?>
                                 hintContent: 'Наш адрес: <b><?php echo carbon_get_theme_option('address') ?></b><br/>Телефон: <b> <?php echo carbon_get_theme_option('tel') ?>',
                             }, {
                             iconLayout: 'default#image',
-                            iconImageHref: '<?php bloginfo("template_url"); ?>/img/pointermapmaster.svg',
+                            iconImageHref: '<?php bloginfo("template_url"); ?>/img/map.svg',
                             iconImageSize: [30, 54],
                             iconImageOffset: [-15, -54]
                             });
