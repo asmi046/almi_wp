@@ -13,6 +13,7 @@ get_header('little');
                             get_template_part( 'template-parts/product-loop' );
                         endwhile;
 
+                        the_posts_pagination();
                     else :
 
                         get_template_part( 'template-parts/content', 'none' );
