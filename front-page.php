@@ -22,7 +22,7 @@ get_header();
                         $args = array(
                             'prev_text'    => 'Previous',
                             'next_text'    => 'Next',
-                        );
+                        ); 
                         the_posts_pagination($args);
                     else :
 
