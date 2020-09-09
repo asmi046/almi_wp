@@ -17,6 +17,8 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
 				->set_width(30),
 			Field::make('text', 'tel', 'Телефон')
 				->set_width(30),
+				Field::make('text', 'address', 'Адрес')
+					->set_width(30),
 			Field::make( 'text', 'crb_text', 'Text Field' ),
 		) );
 		
