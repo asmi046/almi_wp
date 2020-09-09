@@ -7,7 +7,7 @@
         <div class="field-box rL">
             <input type="text" class="inputbox" name="name" placeholder="Name">
             <input type="tel" class="inputbox" name="tel" placeholder="Telephone">
-            <a href="#" class="btn uniSendBtn" value="Send message"></a>
+            <a href="#" class="btn uniSendBtn" value="Send message">Send message</a>
         </div>
     </div>
     <div class="feedback__decor feedback__decor__pets"> 
