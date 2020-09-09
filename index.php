@@ -5,8 +5,8 @@
                     <div class="row rL hid">
 
                     <?php
-                    $args = array('cat' => 3);
-                    query_posts($args);
+                    // $args = array('cat' => 3);
+                    // query_posts($args);
                     if ( have_posts() ) :
                         while ( have_posts() ) :
                             the_post();
@@ -244,7 +244,7 @@
                         <li class="pagination__last-page"><a href="#">7</a></li>
                         <li class="pagination__step pagination__next">
                             <a href="#">
-                                Next
+                                Next2
                             </a>
                         </li>
                     </ul>
