@@ -19,6 +19,11 @@ get_header();
                             get_template_part( 'template-parts/product-loop' );
                         endwhile;
 
+                        $args = array(
+                            'prev_text'    => 'Previous',
+                            'next_text'    => 'Next',
+                        );
+                        the_posts_pagination($args);
                     else :
 
                         get_template_part( 'template-parts/content', 'none' );
@@ -27,12 +32,6 @@ get_header();
                     ?>
                     </div>
                 </div>
-                <?php 
-                $args = array(
-                    'prev_text'    => 'Previous',
-                    'next_text'    => 'Next',
-                );
-                the_posts_pagination($args);?>
                 <div class="pagination clearfix">
                     <ul>
                         <li class="pagination__step pagination__prev">
