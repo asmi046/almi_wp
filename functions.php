@@ -108,8 +108,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 	function footer_menu() {
 		wp_nav_menu(array(
 			'theme_location' => 'header_menu',
-			'container' => false,
-			'menu_class' => 'footer-menu rL hid'
+			'container' => 'nav',
+			'container_class' => 'footer-menu rL hid'
 		));
 	}
 	add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
