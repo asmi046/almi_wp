@@ -1619,7 +1619,9 @@ h2 {
     background-image: url(img/star-half.svg); }
   .star-track .star-empty {
     background-image: url(img/star-empty.svg); }
-
+.nav-links {
+  float: right;
+}
 .pagination {
   width: 100%;
   margin-top: 32px;
