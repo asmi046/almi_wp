@@ -16,14 +16,13 @@
             int($rating);
             var_dump($rating);
             while($inc != 0):?>
-
                 <?php 
                 if($inc < $rating):?>
                         <li class="star-full star-track__item"></li>
                 <?php else:?>
                         <li class="star-empty star-track__item"></li>
-            <?php endif;?>
-            <?php $rating--; $inc++; endwhile;?>
+                <?php endif;?>
+            <?php $inc--; endwhile;?>
             <!-- <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
