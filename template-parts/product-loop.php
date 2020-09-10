@@ -13,6 +13,8 @@
             <?php 
             $inc = 1;
             $rating = carbon_get_the_post_meta('rating');
+            $rating *=1;
+            var_dump($rating);
             foreach($rating as $star):?>
 
                 <?php 
