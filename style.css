@@ -1935,6 +1935,10 @@ h2 {
     margin-top: 51px;
     max-width: 226px;
     display: block; }
+    .box-modal h2 {
+      margin-bottom: 14px;
+      text-align: center;
+    }
   .box-modal {
     position: relative;
     width: 500px;
