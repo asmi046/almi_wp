@@ -13,7 +13,7 @@
             <?php 
             $inc = 5;
             $rating = carbon_get_the_post_meta('rating');
-            int($rating);
+            $rating *= 1;
             var_dump($rating);
             while($inc != 0):?>
                 <?php 
