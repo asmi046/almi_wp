@@ -15,7 +15,7 @@
             $rating = carbon_get_the_post_meta('rating');
             $rating *=1;
             var_dump($rating);
-            foreach($rating as $star):?>
+            while($rating != 0):?>
 
                 <?php 
                 if($inc < 6):
@@ -25,7 +25,7 @@
                         <li class="star-empty star-track__item"></li>
                     <?php endif;
                 endif;?>
-            <?php $inc++; endforeach;?>
+            <?php $rating--; $inc++; endwhile;?>
             <!-- <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
