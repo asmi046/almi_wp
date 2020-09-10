@@ -12,7 +12,8 @@
         <ul class="star-track">
             <?php 
             $inc = 1;
-            foreach($rating = carbon_get_the_post_meta('rating') as $star):?>
+            $rating = carbon_get_the_post_meta('rating');
+            foreach($rating as $star):?>
 
                 <?php 
                 if($inc < 6):
