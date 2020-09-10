@@ -11,19 +11,18 @@
         </p>
         <ul class="star-track">
             <?php 
-            $inc = 1;
+            $inc = 5;
             $rating = carbon_get_the_post_meta('rating');
-            $rating *=1;
+            int($rating);
             var_dump($rating);
-            while($rating != 0):?>
+            while($inc != 0):?>
 
                 <?php 
-                if($inc < 6):
-                    if($rating >= $inc):?>
+                if($inc < $rating):
                         <li class="star-full star-track__item"></li>
-                    <?php else:?>
+                <?php else:?>
                         <li class="star-empty star-track__item"></li>
-                    <?php endif;
+                    <?php
                 endif;?>
             <?php $rating--; $inc++; endwhile;?>
             <!-- <li class="star-full star-track__item"></li>
