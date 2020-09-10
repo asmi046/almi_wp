@@ -14,11 +14,19 @@ jQuery(document).ready(function($) {
 
 	// Типовой скрипт для отправки сообщений на почту
 
+	$('popup-content').click(function(e) {
+		e.preventDefault();
+		var mailmsg = $(this).data('mailmsg');
+		$('#order-modal .uniSendBtn').attr('data-mailmsg', mailmsg);
+		$('#order-modal').arcticmodal();
+	});
+
 	jQuery(".uniSendBtn").click(function(e){ 
 
 		e.preventDefault();
 		var name = $(this).siblings('input[name=name]').val();
 		var tel = $(this).siblings('input[name=tel]').val();
+		var mailmsg = $(this).data('mailmsg');
 		if((tel == "")||(tel.indexOf("_")>0)) {
 			$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
 		} else {
