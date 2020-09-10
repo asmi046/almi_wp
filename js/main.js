@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
 
 	// Типовой скрипт для отправки сообщений на почту
 
-	$('popup-content').click(function(e) {
+	$('.popup-content').click(function(e) {
 		e.preventDefault();
 		var mailmsg = $(this).data('mailmsg');
 		$('#order-modal .uniSendBtn').attr('data-mailmsg', mailmsg);
