@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
 			jqXHR.fail(function (responce) {
 				jQuery('#messgeModal #lineMsg').html("Произошла ошибка. Попробуйте позднее.");
 				jQuery('#messgeModal').arcticmodal();
-			});
+			}); 
 
 		}
 	});
