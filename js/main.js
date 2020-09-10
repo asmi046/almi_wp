@@ -35,6 +35,9 @@ jQuery(document).ready(function($) {
 				{
 					action: 'send_mail',		
 					nonce: allAjax.nonce,
+					mailmsg: mailmsg,
+					name: name,
+					tel: tel,
 					formsubject: jQuery("#formsubject").val(),
 				}	
 			);
