@@ -20,10 +20,10 @@
             var_dump($rating);
            // while($inc != 0):?>
                 <?php 
-                // while($rating != 0) {
-                //     echo '<li class="star-full star-track__item"></li>';
-                //     $rating--; 
-                // }?>
+                while($rating != 0) {
+                    echo '<li class="star-full star-track__item"></li>';
+                    $rating--; 
+                }?>
                 <li class="star-empty star-track__item"></li>
             <?php $inc--; //endwhile;?>
             <!-- <li class="star-full star-track__item"></li>
