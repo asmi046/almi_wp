@@ -13,16 +13,19 @@
             <?php 
             $inc = 5;
             $rating = carbon_get_the_post_meta('rating');
-            $rating *= 1;
+            if(!isset($rating) || empty($rating)) {
+                $rating = 5;
+            }
+            // $rating *= 1;
             var_dump($rating);
-            while($inc != 0):?>
+           // while($inc != 0):?>
                 <?php 
-                while($rating) {
-                    echo '<li class="star-full star-track__item"></li>';
-                    $rating--;
-                }?>
+                // while($rating != 0) {
+                //     echo '<li class="star-full star-track__item"></li>';
+                //     $rating--; 
+                // }?>
                 <li class="star-empty star-track__item"></li>
-            <?php $inc--; endwhile;?>
+            <?php $inc--; //endwhile;?>
             <!-- <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
