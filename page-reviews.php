@@ -41,14 +41,17 @@ get_header('reviews');
                                     <?php
                                     $inc_star = 0;
                                     $inc_star == 0;
-                                    $floor_rating = ceil($rating) - 1; 
+                                    $floor_rating  = $rating;
+                                    $is_half = 0;
+                                    if(strpos($rating, ','))
+                                        $floor_rating = ceil($rating); 
+                                        $is_half = 1;
                                     var_dump($floor_rating);
-                                    $is_half = true;
                                     while($inc_star < 5):
                                         if($inc_star < $floor_rating):
                                             echo '<li class="star-full star-track__item"></li>';
                                         // elseif():
-                                        elseif(($floor_rating < $rating) && $is_half):
+                                        elseif($is_half):
                                             $is_half = 0;?>
                                             <li class="star-half star-track__item"></li>
                                         <?php else:?>
@@ -71,14 +74,17 @@ get_header('reviews');
                                     <?php
                                     $inc_star = 0;
                                     $inc_star == 0;
-                                    $floor_rating = ceil($rating) - 1; 
+                                    $floor_rating  = $rating;
+                                    $is_half = 0;
+                                    if(strpos($rating, ','))
+                                        $floor_rating = ceil($rating); 
+                                        $is_half = 1;
                                     var_dump($floor_rating);
-                                    $is_half = true;
                                     while($inc_star < 5):
                                         if($inc_star < $floor_rating):
                                             echo '<li class="star-full star-track__item"></li>';
                                         // elseif():
-                                        elseif(($floor_rating < $rating) && $is_half):
+                                        elseif($is_half):
                                             $is_half = 0;?>
                                             <li class="star-half star-track__item"></li>
                                         <?php else:?>

@@ -10,38 +10,34 @@
             <?php the_title();?>
         </p>
         <ul class="star-track">
-            <?php 
+        <?php 
             $inc = 5;
             $rating = carbon_get_the_post_meta('rating');
             if(!isset($rating) || empty($rating)) {
                 $rating = 5;
             }
-            // $rating *= 1;
-            var_dump($rating);
-           // while($inc != 0):?>
+            var_dump($rating);?>
                 <?php
                 $inc_star = 0;
-                // while($rating > ($inc_star + 0.5)) {
-                //     var_dump($rating . ' inc' . $inc_star );
-                //     echo '<li class="star-full star-track__item"></li>';
-                //     $inc_star++; 
-                // }
                 $inc_star == 0;
-                $floor_rating = ceil($rating) - 1; 
+                $floor_rating  = $rating;
+                $is_half = 0;
+                if(strpos($rating, ','))
+                    $floor_rating = ceil($rating); 
+                    $is_half = 1;
                 var_dump($floor_rating);
-                $is_half = true;
                 while($inc_star < 5):
                     if($inc_star < $floor_rating):
                         echo '<li class="star-full star-track__item"></li>';
                     // elseif():
-                    elseif(($floor_rating < $rating) && $is_half):
+                    elseif($is_half):
                         $is_half = 0;?>
                         <li class="star-half star-track__item"></li>
                     <?php else:?>
                         <li class="star-empty star-track__item"></li>
                     <?php endif; $inc_star++;
                 endwhile;?>
-            <?php $inc--; //endwhile;?>
+            <?php $inc--;?>
             <!-- <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
             <li class="star-full star-track__item"></li>
