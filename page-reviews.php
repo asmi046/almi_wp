@@ -105,7 +105,7 @@ get_header('reviews');
                     </div>
                     <?php endwhile; wp_reset_postdata(); endif;?>
                     
-                    <div class="review clearfix">
+                    <!-- <div class="review clearfix">
                         <div class="review__avatar cover fleft" style="background-image: url(<?php echo get_template_directory_uri();?>/image/user-avatar-2.png)"></div>
                         <span class="review__user-name db rL hid">User Name</span>
                         <span class="db review__product">Product: &lt;Product name&gt;</span>
@@ -132,7 +132,7 @@ get_header('reviews');
                         <p class="review-message">
                             This is the BEST water bottle I have found on the market. It has a locking mechanism so that there's no leaks or spills. It has a straw attached on the inside so that you can get every last drop. A foldable bowl for the dog to easily drink out of. And it makes it smaller in size which is easier to carry around. A strap to carry from your belt loop, wrist, backpack loop, etc... Love the color options as well. This is a must have!       
                         </p>
-                    </div>
+                    </div> -->
                     
                     <a href="" class="db btn">Add review</a>
                     
