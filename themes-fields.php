@@ -35,4 +35,18 @@ Container::make('post_meta', 'product', 'Доп поля')
 		Field::make('text', 'rating', 'Рейтинг'),
 		Field::make('text', 'price', 'Цена'),
 	));
+Container::make('post_meta', 'reviews', 'Доп поля')
+	->show_on_category('otzyvy')
+	->add_fields(array(
+		Field::make('text', 'stars_product', 'Оценка продукта')
+			->set_width(30),
+		Field::make('text', 'stars_brand', 'Оценка Бренда')
+			->set_width(30),
+		Field::make('text', 'name_product', 'Название продукта')
+			->set_width(30),
+		Field::make('image', 'img_1', 'Фото 1')
+			->set_width(30),
+		Field::make('image', 'img_2', 'Фото 2')
+			->set_width(30),
+	));
 ?>
