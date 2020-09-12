@@ -49,4 +49,8 @@ Container::make('post_meta', 'reviews', 'Доп поля')
 		Field::make('image', 'img_2', 'Фото 2')
 			->set_width(30),
 	));
+// Container::make('post_meta', 'question', 'Доп поля')
+// 	->show_on_category('vopros-otvet')
+// 	->add_fields(array(
+// 	));
 ?>
