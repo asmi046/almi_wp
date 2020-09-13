@@ -11,26 +11,26 @@ Tags: pet,almi
 @charset "UTF-8";
 @font-face {
   font-family: 'Lato-Regular';
-  src: url("assets/fonts/Lato-Regular/Lato-Regular.eot");
-  src: local("☺"), url("assets/fonts/Lato-Regular/Lato-Regular.woff") format("woff"), url("assets/fonts/Lato-Regular/Lato-Regular.ttf") format("truetype"), url("assets/fonts/Lato-Regular/Lato-Regular.svg") format("svg");
+  src: url("./fonts/Lato-Regular/Lato-Regular.eot");
+  src: local("☺"), url("./fonts/Lato-Regular/Lato-Regular.woff") format("woff"), url("./fonts/Lato-Regular/Lato-Regular.ttf") format("truetype"), url("./fonts/Lato-Regular/Lato-Regular.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Lato-Heavy';
-  src: url("assets/fonts/Lato-Heavy/Lato-Heavy.eot");
-  src: local("☺"), url("assets/fonts/Lato-Heavy/Lato-Heavy.woff") format("woff"), url("assets/fonts/Lato-Heavy/Lato-Heavy.ttf") format("truetype"), url("assets/fonts/Lato-Heavy/Lato-Heavy.svg") format("svg");
+  src: url("./fonts/Lato-Heavy/Lato-Heavy.eot");
+  src: local("☺"), url("./fonts/Lato-Heavy/Lato-Heavy.woff") format("woff"), url("./fonts/Lato-Heavy/Lato-Heavy.ttf") format("truetype"), url("./fonts/Lato-Heavy/Lato-Heavy.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'MyriadPro-Regular';
-  src: url("assets/fonts/MyriadPro-Regular/MyriadPro-Regular.eot");
-  src: local("☺"), url("assets/fonts/MyriadPro-Regular/MyriadPro-Regular.woff") format("woff"), url("assets/fonts/MyriadPro-Regular/MyriadPro-Regular.ttf") format("truetype"), url("assets/fonts/MyriadPro-Regular/MyriadPro-Regular.svg") format("svg");
+  src: url("./fonts/MyriadPro-Regular/MyriadPro-Regular.eot");
+  src: local("☺"), url("./fonts/MyriadPro-Regular/MyriadPro-Regular.woff") format("woff"), url("./fonts/MyriadPro-Regular/MyriadPro-Regular.ttf") format("truetype"), url("./fonts/MyriadPro-Regular/MyriadPro-Regular.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'MyriadPro-Bold';
-  src: url("fonts/MyriadPro-Bold/MyriadPro-Bold.eot");
-  src: local("☺"), url("assets/fonts/MyriadPro-Bold/MyriadPro-Bold.woff") format("woff"), url("assets/fonts/MyriadPro-Bold/MyriadPro-Bold.ttf") format("truetype"), url("assets/fonts/MyriadPro-Bold/MyriadPro-Bold.svg") format("svg");
+  src: url("./fonts/MyriadPro-Bold/MyriadPro-Bold.eot");
+  src: local("☺"), url("./fonts/MyriadPro-Bold/MyriadPro-Bold.woff") format("woff"), url("./fonts/MyriadPro-Bold/MyriadPro-Bold.ttf") format("truetype"), url("./fonts/MyriadPro-Bold/MyriadPro-Bold.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 * {
