@@ -1990,7 +1990,8 @@ h2 {
         width: 24px;
         height: 24px;
         margin-right: 6px; }
-    .reviews-box .review .review-message {
+    .reviews-box .review .review-message,
+    .reviews-box .review p {
       margin-top: 19px;
       margin-bottom: 35px; }
     .reviews-box .review .review__file__track .review__file {
