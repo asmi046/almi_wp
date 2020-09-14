@@ -23,11 +23,11 @@ jQuery(document).ready(function($) {
 
 	$('#add-reviews').click(function(e) {
 		e.preventDefault();
-		$('#popup').arcticmodal();
+		$('#popup__body').arcticmodal();
 	});
 	$('#add-faq').click(function(e) {
 		e.preventDefault();
-		$('#popupS').arcticmodal();
+		$('#popup__bodyS').arcticmodal();
 	});
 
 	jQuery(".uniSendBtn").click(function(e){ 
