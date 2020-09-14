@@ -49,9 +49,9 @@
         		</div>
         		<form class="popup__form" action="#" method="get" >
 							<input type="text" name="name" placeholder="Name">
-							<input type="text" name="phone" placeholder="Telephone">
-							<textarea placeholder="Question"></textarea>
-							<button class="popup__btn">Send message</button>
+							<input type="text" name="tel" placeholder="Telephone">
+							<textarea name="question" placeholder="Question"></textarea>
+							<button class="popup__btn faq-btn">Send message</button>
 						</form>
 					</div>
     		</div>
