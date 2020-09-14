@@ -32,4 +32,5 @@
 </div>
 <div class="great-shadow"></div>
 
-<? include "modal-win.php";?>
+<?
+get_template_part('modal-win');?>
