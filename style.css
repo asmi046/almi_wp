@@ -2324,7 +2324,8 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
 }
 
 .popup__input {
-	position: relative;
+  position: relative;
+  box-sizing: border-box;
 }
 
 
