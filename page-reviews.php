@@ -134,7 +134,7 @@ get_header('reviews');
                         </p>
                     </div> -->
                     
-                    <a href="" id="add-reviews" class="db btn">Add review</a>
+                    <a href="#" id="add-reviews" class="db btn">Add review</a>
                     
                 </div>
                 <?php get_template_part('template-parts/feedback');?>

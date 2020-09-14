@@ -16,7 +16,7 @@
 <?php //wp_nav_menu( array('menu' => 'Главное меню', 'container' => false )); ?>
 
 <!-- Подключение  модальных окон-->
-<? include "modal-win.php";?>
+
 
 <!-- Блок вывода иконок -->
 <!-- 
