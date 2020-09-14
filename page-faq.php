@@ -94,7 +94,7 @@ get_header('faq');
                              No it’s not hard to fill. Remove the lip and refill. And the bowl fills easy when squeezed there is a straw inside that delivers the water easily to the bowl area without tilting bottle.
                         </span>
                     </div>  -->
-                    <a href="#" class="btn">Ask a Question</a>
+                    <a href="#" id="add-faq" class="btn">Ask a Question</a>
                 </div>
                 
                 <?php get_template_part('template-parts/feedback');?>

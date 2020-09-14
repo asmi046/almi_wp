@@ -21,6 +21,15 @@ jQuery(document).ready(function($) {
 		$('#order-modal').arcticmodal();
 	});
 
+	$('#add-reviews').click(function(e) {
+		e.preventDefault();
+		$('#popup').arcticmodal();
+	});
+	$('#add-faq').click(function(e) {
+		e.preventDefault();
+		$('#popupS').arcticmodal();
+	});
+
 	jQuery(".uniSendBtn").click(function(e){ 
 
 		e.preventDefault();
