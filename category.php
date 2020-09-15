@@ -245,7 +245,7 @@ get_template_part('template-parts/header-little');
                         </li>
                     </ul>
                 </div>
-                <?php get_template_part('template-parts/feedback');?>
+                <?php get_template_part('template-parts/feedback-litle');?>
             <div class="subfooter"></div>
             </main>
 <?php
