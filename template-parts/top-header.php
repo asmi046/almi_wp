@@ -7,16 +7,6 @@
     <button class="close-btn abs close-menu-btn"></button>
     <a href="<?php echo home_url('/');?>" class="home-link inb vT"></a>
     <?php main_menu();?>
-    <!-- <nav class="main-menu inb vT">
-        <ul>
-            <li><a href="#">Little ALMI</a></li>
-            <li><a href="#">PET'ALMI</a></li>
-            <li><a href="#">Payment and delivery</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
-    </nav> -->
     <div class="contacts-elem fright">
         <a href="mailto:<?php echo carbon_get_theme_option('email');?>" class="contacts-elem__email inb vT"><?php echo carbon_get_theme_option('email');?></a>
 
@@ -32,5 +22,4 @@
 </div>
 <div class="great-shadow"></div>
 
-<?
-get_template_part('modal-win');?>
+<? get_template_part('modal-win');?>

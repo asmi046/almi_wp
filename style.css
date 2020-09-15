@@ -1285,7 +1285,7 @@ h2 {
   #header .large-decor-elem {
     position: absolute;
     top: 0;
-    left: 41.2%;
+    left: 43.2%;
     width: 1082px;
     height: 917px;
     background-repeat: no-repeat;
@@ -1748,10 +1748,11 @@ h2 {
   .feedback .feedback__decor {
     position: absolute; }
     .feedback .feedback__decor.feedback__decor__pets {
-      top: 0%;
+      top: -7%;
       right: 47%;
-      height: 100%;
-      width: 50.3%; }
+      height: 126%;
+      width: 53.3%; 
+    }
     .feedback .feedback__decor.feedback__decor__kids {
       top: 9%;
       right: 57%;
