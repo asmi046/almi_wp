@@ -2133,11 +2133,8 @@ h2 {
  	margin-right: 100px; } }
 
 .popup__image {
-<<<<<<< HEAD
 	background: url(./img/popup-one.png) top right no-repeat;
-=======
-	background: url(img/popup-one.png) top right no-repeat;
->>>>>>> 57cd0e4ae5936c83f89666f997781cb7c9f8fb86
+	/* background: url(img/popup-one.png) top right no-repeat; */
 	background-size: cover;
 	max-width: 310px;
 	width: 100%;
