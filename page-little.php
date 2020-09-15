@@ -3,7 +3,7 @@
 /*
 * Template Name: Little
 */
-get_header('little');
+get_header();
 get_template_part('template-parts/header-little');?>
         <main class="main">
             <div class="inner">

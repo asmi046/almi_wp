@@ -3,7 +3,7 @@
 /*
 * Template Name: Доставка
 */
-get_header('delivery');
+get_header();
 get_template_part('template-parts/header-delivery');?>
        <main class="main">
             <div class="inner">

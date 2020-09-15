@@ -1,6 +1,7 @@
 <?php
 
-get_header('little');
+get_header();
+get_template_part('template-parts/header-little');
 ?>
         <main class="main">
             <div class="inner">
@@ -245,5 +246,7 @@ get_header('little');
                     </ul>
                 </div>
                 <?php get_template_part('template-parts/feedback');?>
+            <div class="subfooter"></div>
+            </main>
 <?php
 get_footer();

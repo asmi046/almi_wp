@@ -3,7 +3,7 @@
 /*
 * Template Name: FAQ
 */
-get_header('faq');
+get_header();
 get_template_part('template-parts/header-faq');?>
         <main class="main">
             <div class="inner">

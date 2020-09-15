@@ -4,7 +4,7 @@
 * Template Name: Отзывы
 */
 
-get_header('reviews');
+get_header();
 get_template_part('template-parts/header-reviews');?>
         <main class="main">
             <div class="inner">
