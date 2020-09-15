@@ -9,7 +9,7 @@
                 <img src="<?php echo get_template_directory_uri();?>/image/littleALMI.svg" class="spacer" alt="Pet`almi logo">
             </div>
             <div class="logo__item">
-                <img src="<?php echo get_template_directory_uri();?>image/pet-almi.svg" class="spacer" alt="Pet`almi logo">
+                <img src="<?php echo get_template_directory_uri();?>/image/pet-almi.svg" class="spacer" alt="Pet`almi logo">
             </div>
         </div>
         <div class="header-content"> 

@@ -40,18 +40,4 @@
   <link rel="icon" type="image/svg+xml" sizes="any" href="/images/icons/any-109fcff231.svg"> 
 -->
 <div id="wrapper">
-    <?php if(is_home() || is_front_page()):
-            get_template_part('template-parts/header-main');?>
-    <?php elseif(is_page(5)):?>
-    <?php   get_template_part('template-parts/header-contacts');
-    elseif(is_page(9)):
-            get_template_part('template-parts/header-delivery');
-    elseif(is_category(4)):
-            get_template_part('template-parts/header-little');
-    elseif(is_page(11)):
-            get_template_part('template-parts/header-faq');
-    elseif(is_page(13)):
-            get_template_part('template-parts/header-reviews');
-    else:
-        get_template_part('template-parts/header-main');
-    endif;?>
+

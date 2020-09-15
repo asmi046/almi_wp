@@ -3,7 +3,8 @@
 /*
 * Template Name: Контакты
 */
-get_header('contacts');?>
+get_header('contacts');
+get_template_part('template-parts/header-contacts');?>
        <main class="main">
             <div class="inner">
                 <div id="map"></div>
