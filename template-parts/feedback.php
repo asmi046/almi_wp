@@ -11,6 +11,9 @@
         </div>
     </div>
     <div class="feedback__decor feedback__decor__pets"> 
-        <img src="<?php echo get_template_directory_uri(); ?>/img/enimal.png" alt="pets" class="spacer">
+        <picture>
+            <source srcset="<?php echo get_template_directory_uri(); ?>/img/enimal.webp" type="image/webp">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/enimal.png" alt="pets" class="spacer">
+        </picture>
     </div>
 </form>
