@@ -1748,10 +1748,10 @@ h2 {
   .feedback .feedback__decor {
     position: absolute; }
     .feedback .feedback__decor.feedback__decor__pets {
-      top: -7%;
+      top: 0%;
       right: 47%;
-      height: 126%;
-      width: 53.3%; }
+      height: 100%;
+      width: 50.3%; }
     .feedback .feedback__decor.feedback__decor__kids {
       top: 9%;
       right: 57%;
@@ -2372,9 +2372,9 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
 /*=============================================*/
 @media screen and (max-width: 1400px) {
   .feedback .feedback__decor.feedback__decor__pets {
-    top: 9%;
+    top: 0;
     right: 53%;
-    height: 120%;
+    height: 100%;
     width: 53%; }
 
   .feedback .feedback__decor.feedback__decor__kids {
