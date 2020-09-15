@@ -5,8 +5,13 @@
                     <div class="row rL hid">
 
                     <?php
-                    $args = array('cat' => 3);
+                    
+                    global $query_string;
+                    parse_str($query_string, $args);
+
+                    $args['cat'] = 3;
                     query_posts($args);
+                    
                     if ( have_posts() ) :
                         while ( have_posts() ) :
                             the_post();
