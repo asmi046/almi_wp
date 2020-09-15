@@ -2133,7 +2133,7 @@ h2 {
  	margin-right: 100px; } }
 
 .popup__image {
-	background: url(../img/popup-one.png) top right no-repeat;
+	background: url(./img/popup-one.png) top right no-repeat;
 	background-size: cover;
 	max-width: 310px;
 	width: 100%;
