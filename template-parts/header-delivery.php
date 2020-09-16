@@ -1,3 +1,4 @@
+<div id="wrapper">
 <header id="header">
     <div class="middle-decor-elem middle-decor-elem__pd"> 
     </div>

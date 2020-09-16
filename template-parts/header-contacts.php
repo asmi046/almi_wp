@@ -1,3 +1,4 @@
+<div id="wrapper" class="contacts-page">
 <header id="header">
     <div class="middle-decor-elem middle-decor-elem__contacts">
     </div>

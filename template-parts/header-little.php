@@ -1,3 +1,4 @@
+<div id="wrapper">
 <header id="header">
     <div class="large-decor-elem large-decor-elem__kids"> 
     </div>
