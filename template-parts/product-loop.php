@@ -8,8 +8,8 @@
             </div>
         <?}?>
         <div class="catalog__item__img cover" >
-            <a href = "<?php echo carbon_get_the_post_meta('amazon_link');?>">
-                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="" class="spacer">
+            <a target="_blank" href = "<?php echo carbon_get_the_post_meta('amazon_link');?>">
+                <img src="<?php echo get_the_post_thumbnail_url($post_id, "medium");?>" alt="" class="spacer">
             </a>
         </div>
         <p>
@@ -53,7 +53,7 @@
         <span class="catalog__item__price db">$<?php echo carbon_get_the_post_meta('price');?></span>
         <div class="catalog__link-box">
             Buy on
-            <a href="<?php echo carbon_get_the_post_meta('amazon_link');?>" class="amazon-link"></a>
+            <a target="_blank" href="<?php echo carbon_get_the_post_meta('amazon_link');?>" class="amazon-link"></a>
         </div>
     </div>
 

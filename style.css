@@ -1335,7 +1335,8 @@ h2 {
       height: 188px;
       border-radius: 50%;
       margin-right: 50.5px;
-      margin-bottom: 50.5px; }
+      margin-bottom: 50.5px; 
+      box-shadow: 0 5px 19px 0px #c8c9ca;}
       #header .logo__box-small .logo__item:last-child {
         margin-right: 0; }
   #header .header-content {
@@ -2295,9 +2296,6 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
 	max-width: 330px;
 }
 
-.popup__form_two input {
-	margin-bottom: 61px;
-}
 
 .popup__form_two textarea {
 

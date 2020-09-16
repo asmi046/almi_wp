@@ -78,8 +78,9 @@
         		</div>
         		<form class="popup__form popup__form_two" action="#" method="get" >
 							<input class = "inputbox" type="text" name="name" placeholder="Name">
-							<textarea placeholder="Question"></textarea>
-							<button class="btn">Send message</button>
+							<input  class = "inputbox" type="text" name="tel" placeholder="Telephone">
+							<textarea name = "reviews" placeholder="Review"></textarea>
+							<button class="btn" id = "sendRev">Send message</button>
 						</form>
         	</div>
         	<div class="popup__form_right">
