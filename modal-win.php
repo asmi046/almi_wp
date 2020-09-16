@@ -77,9 +77,9 @@
         				</h3>
         		</div>
         		<form class="popup__form popup__form_two" action="#" method="get" >
-							<input type="text" name="name" placeholder="Name">
+							<input class = "inputbox" type="text" name="name" placeholder="Name">
 							<textarea placeholder="Question"></textarea>
-							<button class="popup__btn ">Send message</button>
+							<button class="btn">Send message</button>
 						</form>
         	</div>
         	<div class="popup__form_right">
