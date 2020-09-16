@@ -33,7 +33,8 @@ function crb_load() {
 // если 2 меню в шапке пишем  - Меню в шапке (верхняя часть)
 
 register_nav_menus( array(
-	'header_menu' => 'Главное меню'
+	'header_menu' => 'Главное меню',
+	'footer_menu' => 'Меню в подвале',
 ) );
 
 add_theme_support( 'post-thumbnails' );
@@ -112,7 +113,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 	}
 	function footer_menu() {
 		wp_nav_menu(array(
-			'theme_location' => 'header_menu',
+			'theme_location' => 'footer_menu',
 			'container' => 'nav',
 			'container_class' => 'footer-menu rL hid'
 		));
