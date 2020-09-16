@@ -22,7 +22,7 @@
                 <h3 class="popup__title_text">To get a consultation</h3>
                 <input type="text" class="inputbox" name="name" placeholder="Name">
                 <input type="tel" class="inputbox" name="tel" placeholder="Telephone">
-                <a href="#" class="btn uniSendBtn" value="Send message">Send message</a>
+                <a href="#" data-formname = "Main form" class="btn uniSendBtn" value="Send message">Send message</a>
             </form>
         </div>
     

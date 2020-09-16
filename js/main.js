@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		var name = $(this).siblings('input[name=name]').val();
 		var tel = $(this).siblings('input[name=tel]').val();
-		var mailmsg = $(this).data('mailmsg');
+		
 		if((tel == "")||(tel.indexOf("_")>0)) {
 			$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
 		} else {
@@ -77,20 +77,19 @@ jQuery(document).ready(function($) {
 				{
 					action: 'send_mail',		
 					nonce: allAjax.nonce,
-					mailmsg: mailmsg,
 					name: name,
 					tel: tel,
-					formsubject: jQuery("#formsubject").val(),
+					formsubject: jQuery(this).data("formname"),
 				}	
 			);
 					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
+				alert(responce);
 				document.location.href = 'https://almi.asmi-studio.ru/stranicza-blagodarnosti/';	
 			});
 					
 			jqXHR.fail(function (responce) {
-				jQuery('#messgeModal #lineMsg').html("Произошла ошибка. Попробуйте позднее.");
-				jQuery('#messgeModal').arcticmodal();
+				alert("Произошла ошибка. Попробуйте позднее.");
 			}); 
 
 		}

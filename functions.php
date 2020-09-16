@@ -1,7 +1,7 @@
 <?php
 
-define("COMPANY_NAME", "<Вписываем имя компании>");
-define("MAIL_RESEND", "<Вписываем почтовый ящик который подставляется в шапку письма>");
+define("COMPANY_NAME", "Almi");
+define("MAIL_RESEND", "info@almiproduct.ru");
 
 //----Удаляем category из УРЛа категорий
 // add_filter( 'category_link', function($a){
@@ -130,8 +130,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 	}
 
 	
-add_action( 'wp_ajax_send', 'send_mail' );
-add_action( 'wp_ajax_nopriv_send', 'send_mail' );
+add_action( 'wp_ajax_send_mail', 'send_mail' );
+add_action( 'wp_ajax_nopriv_send_mail', 'send_mail' );
 
 function send_mail() {
   if ( empty( $_REQUEST['nonce'] ) ) {
@@ -140,21 +140,21 @@ function send_mail() {
   
   if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
 	
-	$headers = array(
-	  'From: Сайт Almi <noreply@almi.ru>',
-	  'content-type: text/html',
-	);
+	
   
 	$headers = array(
-		'From: Сайт '.COMPANY_NAME.' <MAIL_RESEND>',
+		'From: Сайт '.COMPANY_NAME.' <'.MAIL_RESEND.'>',
 		'content-type: text/html',
 	);
+
 
 	add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 	
 	$adr_to_send = carbon_get_theme_option('email_send');
-	$mail_content = 'Заявка со страницы '.$_REQUEST["mailmsg"].'<br><strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"];
-	$mail_them = "<Тема письма>";
+	$mail_content = 'Заявка с формы '.$_REQUEST["formsubject"].'<br><strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"];
+	$mail_them = "Заявка с сайта Almi";
+
+	// wp_die( $headers );
 
 	if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers)) {
 		wp_die(json_encode(array("send" => true )));

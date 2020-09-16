@@ -19,14 +19,14 @@ get_template_part('template-parts/header-delivery');?>
                     </div>
                     <div class="terms-box">
                         <div class="terms__item">
-                            <a href="https://www.amazon.com/gp/help/customer/display.html/ref=hp_left_v4_sib?ie=UTF8&nodeId=201894450" class="amazon-link"></a>
+                            <a target="_blank" href="https://www.amazon.com/gp/help/customer/display.html/ref=hp_left_v4_sib?ie=UTF8&nodeId=201894450" class="amazon-link"></a>
                             <h4>Payment, Pricing &amp; Promotions</h4>
-                            <a href="https://www.amazon.com/gp/help/customer/display.html/ref=hp_left_v4_sib?ie=UTF8&nodeId=201894450" class="btn">More details</a>
+                            <a target="_blank" href="https://www.amazon.com/gp/help/customer/display.html/ref=hp_left_v4_sib?ie=UTF8&nodeId=201894450" class="btn">More details</a>
                         </div>
                         <div class="terms__item">
-                            <a href="https://www.amazon.com/gp/help/customer/display.html/ref=hp_bc_nav?ie=UTF8&nodeId=201910060" class="amazon-link"></a>
+                            <a target="_blank" href="https://www.amazon.com/gp/help/customer/display.html/ref=hp_bc_nav?ie=UTF8&nodeId=201910060" class="amazon-link"></a>
                             <h4>Shipping &amp; Delivery</h4>
-                            <a href="https://www.amazon.com/gp/help/customer/display.html/ref=hp_bc_nav?ie=UTF8&nodeId=201910060" class="btn">More details</a>
+                            <a target="_blank" href="https://www.amazon.com/gp/help/customer/display.html/ref=hp_bc_nav?ie=UTF8&nodeId=201910060" class="btn">More details</a>
                         </div>
                     </div>
                 </div>
