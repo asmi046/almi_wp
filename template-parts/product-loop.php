@@ -1,10 +1,16 @@
 <div class="catalog__item__wr">
     <div class="catalog__item">
-        <div class="birka">
-            2 Packs
-        </div>
-        <div class="catalog__item__img cover" style="background-image: url(image/products-for-pets-4.jpg)">
-            <img src="<?php echo get_the_post_thumbnail_url();?>" alt="" class="spacer">
+        
+        <? $stiker = carbon_get_the_post_meta("stiker");
+        if (!empty($stiker)) { ?>
+            <div class="birka">
+                <? echo $stiker; ?>
+            </div>
+        <?}?>
+        <div class="catalog__item__img cover" >
+            <a href = "<?php echo carbon_get_the_post_meta('amazon_link');?>">
+                <img src="<?php echo get_the_post_thumbnail_url();?>" alt="" class="spacer">
+            </a>
         </div>
         <p>
             <?php the_title();?>

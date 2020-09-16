@@ -33,6 +33,7 @@ Container::make('post_meta', 'product', 'Доп поля')
 		Field::make('text', 'amazon_link', 'Ссылка на Амазон'),
 		Field::make('rich_text', 'short_descr', 'Краткое описание'),
 		Field::make('text', 'rating', 'Рейтинг'),
+		Field::make('text', 'stiker', 'Бирка'),
 		Field::make('text', 'price', 'Цена'),
 	));
 Container::make('post_meta', 'reviews', 'Доп поля')
