@@ -6,7 +6,7 @@
                         <span class="brend-link__logo tbc vM">
                             <img src="<?php echo get_template_directory_uri();?>/image/Little_Almi-logo-footer.svg" alt="Little_Almi footer logo">
                         </span>
-                        <a href="#" class="brend-link__text tbc vM">
+                        <a href="<?bloginfo("url");?>" class="brend-link__text tbc vM">
                             Products Little Almi
                         </a>
                     </div>
@@ -16,7 +16,7 @@
                         <span class="brend-link__logo tbc vM">
                             <img src="<?php echo get_template_directory_uri();?>/image/PET'ALMI-logo-footer.svg" alt="PET'ALMI footer logo">
                         </span>
-                        <a href="#" class="brend-link__text tbc vM">
+                        <a href="<?echo get_category_link(7);?>" class="brend-link__text tbc vM">
                             Products PET'ALMI
                         </a>
                     </div>
@@ -31,14 +31,7 @@
                     <span><?php echo carbon_get_theme_option('tel');?></span>
                 </a>
             </div>
-            <!-- <nav class="footer-menu rL hid">
-                <ul>
-                    <li><a href="#">Payment and delivery</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav> -->
+
             <?php footer_menu();?>
             <span class="db copyright">
                 © 2020 ALMI

@@ -1389,6 +1389,11 @@ h2 {
         width: 73px;
         font-size: 16px;
         line-height: 28px; }
+        #footer .brend-link-box .brend-link_wr .brend-link .brend-link__text:hover {
+          text-decoration: none;
+          color: #E0E1E3;
+        }
+
   #footer .contacts-elem {
     margin-top: 24px;
     margin-left: 20px; }
