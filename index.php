@@ -10,7 +10,7 @@ get_template_part('template-parts/header-main');?>
                     global $query_string;
                     parse_str($query_string, $args);
 
-                    $args['cat'] = 3;
+                    $args['cat'] = 7;
                     query_posts($args);
                     
                     if ( have_posts() ) :

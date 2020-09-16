@@ -3,6 +3,11 @@
 define("COMPANY_NAME", "<Вписываем имя компании>");
 define("MAIL_RESEND", "<Вписываем почтовый ящик который подставляется в шапку письма>");
 
+//----Удаляем category из УРЛа категорий
+add_filter( 'category_link', function($a){
+	return str_replace( 'category/', '', $a );
+}, 99 );
+
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php
 include "carbon-fields/carbon-fields-plugin.php";
