@@ -9,7 +9,7 @@ get_template_part('template-parts/header-faq');?>
             <div class="inner">
                 <div class="breadcrumbs">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="<?bloginfo("url");?>">Home</a></li>
                         <li><span>Customer questions &amp; answers</span></li>
                     </ul>
                 </div> 

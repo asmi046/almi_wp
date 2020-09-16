@@ -10,7 +10,7 @@ get_template_part('template-parts/header-reviews');?>
             <div class="inner">
                 <div class="breadcrumbs">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="<?bloginfo("url");?>">Home</a></li>
                         <li><span>Reviews</span></li>
                     </ul>
                 </div> 
