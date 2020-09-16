@@ -1439,7 +1439,8 @@ h2 {
   background: #ffff;
   position: relative;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: auto;
+  margin-right: 20px;
   box-shadow: 0 22px 18px -15px #c8c9ca;
   transition: all 300ms; }
   .burger-btn:hover {
@@ -2749,7 +2750,6 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
     padding-top: 50px;
     margin-bottom: 90px; }
     #header .logo__box-large .logo__item {
-      margin: 0 auto;
       display: block;
       margin-bottom: 20px; }
   #header .logo__box-small {

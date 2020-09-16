@@ -4,9 +4,9 @@ define("COMPANY_NAME", "<Вписываем имя компании>");
 define("MAIL_RESEND", "<Вписываем почтовый ящик который подставляется в шапку письма>");
 
 //----Удаляем category из УРЛа категорий
-add_filter( 'category_link', function($a){
-	return str_replace( 'category/', '', $a );
-}, 99 );
+// add_filter( 'category_link', function($a){
+// 	return str_replace( 'category/', '', $a );
+// }, 99 );
 
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php
@@ -71,6 +71,8 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		
 		wp_enqueue_script( 'jquery');
 
+		wp_enqueue_script( 'fancybox', get_template_directory_uri().'/js/jquery.fancybox.min.js', array(), $scrypt_version , true); //Модальные окна
+		
 		wp_enqueue_script( 'amodal', get_template_directory_uri().'/js/jquery.arcticmodal-0.3.min.js', array(), $scrypt_version , true); //Модальные окна
 		wp_enqueue_script( 'mask', get_template_directory_uri().'/js/jquery.inputmask.bundle.js', array(), $scrypt_version , true); //маска для инпутов
 		wp_enqueue_script( 'lightbox', get_template_directory_uri().'/js/lightbox.min.js', array(), $scrypt_version , true); //Лайтбокс

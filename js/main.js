@@ -1,3 +1,36 @@
+//Меню из верстки
+$burgerBtn = jQuery('.burger-btn');
+$navPanel = jQuery('.nav-panel');
+$greatShadow = jQuery('.great-shadow');
+$closeMenuBtn = jQuery('.close-menu-btn');
+$body = jQuery('body');
+
+
+function showMenu() {
+    $navPanel.addClass('active');
+    $greatShadow.fadeIn(200);
+    $body.addClass('fixed');
+}
+
+function hideMenu() {
+    $navPanel.removeClass('active');
+    $greatShadow.fadeOut(200);
+    $body.removeClass('fixed');
+}
+
+
+$burgerBtn.bind('click', function(e){
+    e.preventDefault();
+    showMenu();
+});
+
+$closeMenuBtn.bind('click', hideMenu);
+$greatShadow.bind('click', hideMenu);
+
+jQuery('.fancybox').fancybox({});
+
+
+
 // Функция верификации e-mail
 function isEmail(email) {
 	var regex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
