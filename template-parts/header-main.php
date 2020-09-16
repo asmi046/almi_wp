@@ -12,7 +12,14 @@
         </div>
         <div class="header-content">
             <h2>Products for pets</h2>
-            <h1>PET'ALMI</h1>
+            <h1>PET'ALMI <?
+             $t_paged = get_query_var('paged');
+             
+             if (!empty($t_paged)){
+                 echo "<span>( Page # ".$t_paged." )</span>";
+             }
+             
+             ?></h1>
             <p>
                 Made of high quality nylon fabric to ensure safety, features the solid zinc alloy swivel snap and metal buckles guarantee extra durability
             </p>

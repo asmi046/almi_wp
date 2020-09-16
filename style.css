@@ -1343,6 +1343,10 @@ h2 {
     width: 50%; }
     #header .header-content h1 {
       margin-bottom: 18px; }
+    #header .header-content h1 span {
+        font-size: 22px;
+        color:#EB4125;
+      }
     #header .header-content h2 {
       color: #EE798A;
       margin-bottom: 6px; }
