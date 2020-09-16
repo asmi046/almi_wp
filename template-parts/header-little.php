@@ -1,4 +1,4 @@
-<div id="wrapper">
+<div id="wrapper" class="little-almi-page">
 <header id="header">
     <div class="large-decor-elem large-decor-elem__kids"> 
     </div>

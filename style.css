@@ -1907,7 +1907,7 @@ h2 {
   background-color: #EE798A; }
 .little-almi-page .catalog__item__wr .catalog__link-box .amazon-link {
   border: 1px solid #EE798A; }
-.little-almi-page .pagination ul li.pagination__current span {
+.little-almi-page .pagination span.current {
   background-color: #EE798A; }
 
 .faq-page #header {

@@ -14,10 +14,7 @@ get_template_part('template-parts/header-little');
                             get_template_part( 'template-parts/product-loop' );
                         endwhile;
                         
-                        the_posts_pagination(array(
-                            'prev_text'    => 'Previous',
-                            'next_text'    => 'Next',
-                        ));
+                        
 
                     else :
 
@@ -29,6 +26,12 @@ get_template_part('template-parts/header-little');
                     </div>
                 </div>
                 
+                <?
+                    the_posts_pagination(array(
+                        'prev_text'    => 'Previous',
+                        'next_text'    => 'Next',
+                    ));
+                ?>
     
                 <?php get_template_part('template-parts/feedback-litle');?>
             <div class="subfooter"></div>
