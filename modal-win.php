@@ -46,11 +46,11 @@
         				Ask a Question
         			</h3>
         		</div>
-        		<form class="popup__form" action="#" method="get" >
+        		<form formname = "Форма FAQ" class="popup__form" action="#" method="get" >
 							<input class = "inputbox" type="text" name="name" placeholder="Name">
 							<input  class = "inputbox" type="text" name="tel" placeholder="Telephone">
 							<textarea name="question" placeholder="Question"></textarea>
-							<button class="btn">Send message</button>
+							<button class="btn" id = "getQestion">Send message</button>
 						</form>
 					</div>
     		</div>

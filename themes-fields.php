@@ -36,7 +36,7 @@ Container::make('post_meta', 'product', 'Доп поля')
 		Field::make('text', 'stiker', 'Бирка'),
 		Field::make('text', 'price', 'Цена'),
 	));
-Container::make('post_meta', 'reviews', 'Доп поля')
+Container::make('post_meta', 'reviews', 'Параметры отзывы')
 	->show_on_category('otzyvy')
 	->add_fields(array(
 		Field::make('text', 'stars_product', 'Оценка продукта')
@@ -50,8 +50,13 @@ Container::make('post_meta', 'reviews', 'Доп поля')
 		Field::make('image', 'img_2', 'Фото 2')
 			->set_width(30),
 	));
-// Container::make('post_meta', 'question', 'Доп поля')
-// 	->show_on_category('vopros-otvet')
-// 	->add_fields(array(
-// 	));
+ 
+Container::make('post_meta', 'question', 'Данные пользователя задавшего вопрос')
+ 	->show_on_category('vopros-otvet')
+ 	->add_fields(array(
+		Field::make('text', 'q_name', 'Имя')
+			->set_width(50),
+		Field::make('text', 'q_phone', 'Телефон')
+			->set_width(50),
+	));
 ?>

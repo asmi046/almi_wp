@@ -22,7 +22,9 @@ get_template_part('template-parts/header-faq');?>
                         if($query->have_posts()):
                             while($query->have_posts()):
                                 $query->the_post();
-                    ?>
+                                $content = get_the_content();
+                                if (empty($content)) continue;
+                        ?>
                                 <div class="FAQ-item">
                                     <span class="FAQ-item__question db">
                                         <span class="FAQ-item__caption">
@@ -34,7 +36,7 @@ get_template_part('template-parts/header-faq');?>
                                         <span class="FAQ-item__caption">
                                             Answer:
                                         </span>
-                                        <?php the_content();?>
+                                        <?php echo $content;?>
                                     </span>
                                 </div>
                     <?php endwhile; endif; ?>

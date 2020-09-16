@@ -84,7 +84,6 @@ jQuery(document).ready(function($) {
 			);
 					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-				alert(responce);
 				document.location.href = 'https://almi.asmi-studio.ru/stranicza-blagodarnosti/';	
 			});
 					
@@ -94,6 +93,46 @@ jQuery(document).ready(function($) {
 
 		}
 	});
+
+	jQuery("#getQestion").click(function(e){ 
+
+		e.preventDefault();
+		var name = $(this).siblings('input[name=name]').val();
+		var tel = $(this).siblings('input[name=tel]').val();
+		var quest = $(this).siblings('textarea[name=question]').val();
+		
+		if (quest == "")
+		{
+			$(this).siblings('textarea[name=question]').css("background-color","#ff91a4");
+			return;
+		}
+
+		if((tel == "")||(tel.indexOf("_")>0)) {
+			$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
+		} else {
+			var  jqXHR = jQuery.post(
+				allAjax.ajaxurl,
+				{
+					action: 'get_qestion',		
+					nonce: allAjax.nonce,
+					name: name,
+					tel: tel,
+					formsubject: jQuery(this).data("formname"),
+					quest:quest
+				}	
+			);
+					
+			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
+				document.location.href = 'https://almi.asmi-studio.ru/stranicza-blagodarnosti/';	
+			});
+					
+			jqXHR.fail(function (responce) {
+				alert("Произошла ошибка. Попробуйте позднее.");
+			}); 
+
+		}
+	});
+
 	jQuery(".faq-btn").click(function(e){ 
 
 		e.preventDefault();

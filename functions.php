@@ -129,6 +129,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 		';
 	}
 
+//------Отправка со стандартного окна
 	
 add_action( 'wp_ajax_send_mail', 'send_mail' );
 add_action( 'wp_ajax_nopriv_send_mail', 'send_mail' );
@@ -167,7 +168,63 @@ function send_mail() {
 	wp_die( 'НО-НО-НО!', '', 403 );
   }
 }
+
+
+//------Отправка с окна задать вопрос
 	
+add_action( 'wp_ajax_get_qestion', 'get_qestion' );
+add_action( 'wp_ajax_nopriv_get_qestion', 'get_qestion' );
+
+function get_qestion() {
+  if ( empty( $_REQUEST['nonce'] ) ) {
+	wp_die( '0' );
+  }
+  
+  if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+	
+	$headers = array(
+		'From: Сайт '.COMPANY_NAME.' <'.MAIL_RESEND.'>',
+		'content-type: text/html',
+	);
+
+	add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+	
+	$adr_to_send = carbon_get_theme_option('email_send');
+	$mail_content = 'Заявка с формы '.$_REQUEST["formsubject"].'<br><strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"].' <br/> <strong>Вопрос:</strong> <br/>'.$_REQUEST["quest"];
+	$mail_them = "Вопрос с сайта Almi";
+
+	//  Записываем вопрос в админку
+	$post_data = array(
+		'post_title'    => wp_strip_all_tags( $_REQUEST["quest"] ),
+		'post_content'  => "",
+		'post_status'   => 'publish',
+		'post_author'   => 1,
+		'post_category' => array( 6 )
+	);
+
+	$post_id = wp_insert_post( $post_data );
+	
+	// Если пост вставлен добавляем параметры
+
+	if (!empty($post_id)) {
+		add_post_meta( $post_id, "q_name", $_REQUEST["name"], true );
+		add_post_meta( $post_id, "q_phone", $_REQUEST["tel"], true );
+	}
+
+
+	if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers)) {
+		wp_die(json_encode(array("send" => true )));
+	}
+	else {
+		wp_die( 'Ошибка отправки!', '', 403 );
+	}
+	
+  } else {
+	wp_die( 'НО-НО-НО!', '', 403 );
+  }
+}
+
+
 add_action( 'wp_ajax_send_question', 'send_question' );
 add_action( 'wp_ajax_nopriv_send_question', 'send_question' );
 
