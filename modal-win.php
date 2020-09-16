@@ -4,7 +4,7 @@
 
 <div style="display: none;">
     <div class="box-modal" id="messgeModal">
-        <div class="box-modal_close arcticmodal-close"><?_e("закрыть","rubex");?></div>
+        <div class="box-modal_close arcticmodal-close">Close</div>
         
         <div class = "modalline" id = "lineIcon">
         </div>
@@ -15,11 +15,11 @@
 </div>
 <div style="display: none;">
     <div class="box-modal" id="order-modal">
-        <div class="box-modal_close arcticmodal-close"><?_e("закрыть","rubex");?></div>
+        <div class="box-modal_close arcticmodal-close">Close</div>
         
         <div class = "modalline" id = "lineIcon">
             <form action="">
-                <h2>Получить консультацию</h2>
+                <h3 class="popup__title_text">To get a consultation</h3>
                 <input type="text" class="inputbox" name="name" placeholder="Name">
                 <input type="tel" class="inputbox" name="tel" placeholder="Telephone">
                 <a href="#" class="btn uniSendBtn" value="Send message">Send message</a>
@@ -34,8 +34,7 @@
 <div id="popup" class="popup" style="display: none;">
 
     	<div id="popup__body" class="popup__body box-modal">
-       	<div class="box-modal_close arcticmodal-close">							<?_e("закрыть","rubex");?>
-       	</div>
+       	<div class="box-modal_close arcticmodal-close">Close</div>
 
        	<div id="popup__content" class="popup__content">
        		<!-- <a href="#" class="popup__close"></a> -->
@@ -48,10 +47,10 @@
         			</h3>
         		</div>
         		<form class="popup__form" action="#" method="get" >
-							<input type="text" name="name" placeholder="Name">
-							<input type="text" name="tel" placeholder="Telephone">
+							<input class = "inputbox" type="text" name="name" placeholder="Name">
+							<input  class = "inputbox" type="text" name="tel" placeholder="Telephone">
 							<textarea name="question" placeholder="Question"></textarea>
-							<button class="popup__btn faq-btn">Send message</button>
+							<button class="btn">Send message</button>
 						</form>
 					</div>
     		</div>
@@ -64,8 +63,7 @@
 	<div id="popupS" class="popup popup-two" style="display: none;">
 
     <div id="popup__bodyS" class="popup__body box-modal">
-      <div class="box-modal_close arcticmodal-close">									<?_e("закрыть","rubex");?>
-      </div>
+      <div class="box-modal_close arcticmodal-close">Close</div>
 				<div class="popup__content popup__content-two">
        		<!-- <a href="#" class="popup__close"></a> -->
 
@@ -81,7 +79,7 @@
         		<form class="popup__form popup__form_two" action="#" method="get" >
 							<input type="text" name="name" placeholder="Name">
 							<textarea placeholder="Question"></textarea>
-							<button class="popup__btn">Send message</button>
+							<button class="popup__btn ">Send message</button>
 						</form>
         	</div>
         	<div class="popup__form_right">

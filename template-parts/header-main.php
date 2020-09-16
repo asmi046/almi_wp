@@ -19,7 +19,7 @@
             <p>
                 Note: the tab on the seatbelt clip is 2cm, please check your buckle's size and compatibility before purchase
             </p>
-            <a href="#" data-mailmsg="Заявка со страницы <?php the_title();?>" class="btn popup-content">To get a consultation</a>
+            <a href="#" data-mailmsg="Заявка c главной" class="btn popup-content">To get a consultation</a>
         </div>
     </div>
 </header>
