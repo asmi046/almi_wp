@@ -150,11 +150,11 @@
 						
 						<div class="popup__stars">
 							<div class = "popup__stars_component" id = "prodQ">
-								<input type="radio" name="rating" value="5" id="5"><label for="5" class = "popup__stars_rating" ></label>
-								<input type="radio" name="rating" value="4" id="4"><label for="4" class = "popup__stars_rating" ></label>
-								<input type="radio" name="rating" value="3" id="3"><label for="3" class = "popup__stars_rating" ></label>
-								<input type="radio" name="rating" value="2" id="2"><label for="2" class = "popup__stars_rating" ></label>
-								<input type="radio" name="rating" value="1" id="1"><label for="1" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingP" value="5" id="p5"><label for="p5" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingP" value="4" id="p4"><label for="p4" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingP" value="3" id="p3"><label for="p3" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingP" value="2" id="p2"><label for="p2" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingP" value="1" id="p1"><label for="p1" class = "popup__stars_rating" ></label>
 							</div>
 							Product Quality
 						</div>
@@ -162,11 +162,11 @@
 						
 						<div class="popup__stars">
 							<div class = "popup__stars_component" id = "brendQ">
-								<input type="radio" name="rating" value="5" id="5"><label for="5" class = "popup__stars_rating" ></label>
-								<input type="radio" name="rating" value="4" id="4"><label for="4" class = "popup__stars_rating" ></label>
-								<input type="radio" name="rating" value="3" id="3"><label for="3" class = "popup__stars_rating" ></label>
-								<input type="radio" name="rating" value="2" id="2"><label for="2" class = "popup__stars_rating" ></label>
-								<input type="radio" name="rating" value="1" id="1"><label for="1" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingQ" value="5" id="q5"><label for="q5" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingQ" value="4" id="q4"><label for="q4" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingQ" value="3" id="q3"><label for="q3" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingQ" value="2" id="q2"><label for="q2" class = "popup__stars_rating" ></label>
+								<input type="radio" name="ratingQ" value="1" id="q1"><label for="q1" class = "popup__stars_rating" ></label>
 							</div>
 							Brand Quality
 						</div>

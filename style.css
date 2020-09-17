@@ -2379,7 +2379,8 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
   display: block;
 }
 
-input:checked ~  .popup__stars_rating,
+.popup__stars_component input[name=ratingP]:checked ~ .popup__stars_rating,
+.popup__stars_component input[name=ratingQ]:checked ~ .popup__stars_rating,
 .popup__stars_component .popup__stars_rating:hover ~  .popup__stars_rating,
 .popup__stars_component .popup__stars_rating:hover,
 .popup__stars_rating.full {
