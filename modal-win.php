@@ -147,20 +147,27 @@
 
 						<div class="popup-block__assess">
 						<h3 class="popup__assess_title">Assessement</h3>
+						
 						<div class="popup__stars">
-							<div class="popup__stars_rating"></div>
-							<div class="popup__stars_rating"></div>
-							<div class="popup__stars_rating"></div>
-							<div class="popup__stars_rating"></div>
-							<div class="popup__stars_rating"></div>
-								Product Quality	
+							<div class = "popup__stars_component" id = "prodQ">
+								<input type="radio" name="rating" value="5" id="5"><label for="5" class = "popup__stars_rating" ></label>
+								<input type="radio" name="rating" value="4" id="4"><label for="4" class = "popup__stars_rating" ></label>
+								<input type="radio" name="rating" value="3" id="3"><label for="3" class = "popup__stars_rating" ></label>
+								<input type="radio" name="rating" value="2" id="2"><label for="2" class = "popup__stars_rating" ></label>
+								<input type="radio" name="rating" value="1" id="1"><label for="1" class = "popup__stars_rating" ></label>
+							</div>
+							Product Quality
 						</div>
+
+						
 						<div class="popup__stars">
-							<div class="popup__stars_rating"></div>
-							<div class="popup__stars_rating"></div>
-							<div class="popup__stars_rating"></div>
-							<div class="popup__stars_rating"></div>
-							<div class="popup__stars_rating"></div>	
+							<div class = "popup__stars_component" id = "brendQ">
+								<input type="radio" name="rating" value="5" id="5"><label for="5" class = "popup__stars_rating" ></label>
+								<input type="radio" name="rating" value="4" id="4"><label for="4" class = "popup__stars_rating" ></label>
+								<input type="radio" name="rating" value="3" id="3"><label for="3" class = "popup__stars_rating" ></label>
+								<input type="radio" name="rating" value="2" id="2"><label for="2" class = "popup__stars_rating" ></label>
+								<input type="radio" name="rating" value="1" id="1"><label for="1" class = "popup__stars_rating" ></label>
+							</div>
 							Brand Quality
 						</div>
 						</div>	
