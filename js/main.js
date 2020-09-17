@@ -30,14 +30,18 @@ $greatShadow.bind('click', hideMenu);
 jQuery('.fancybox').fancybox({});
 
 //------Файл открытие и подгрузка имени
-function getFileName() {
+function getFileName1() {
     var file = document.getElementById('myfile').value;
     file = file.replace(/\\/g, '/').split('/').pop();
     document.getElementById('file-name').innerHTML = '' + file;
 
-    var file = document.getElementById('myfiles').value;
+    
+}
+
+function getFileName2(){
+	var file = document.getElementById('myfiles').value;
     file = file.replace(/\\/g, '/').split('/').pop();
-    document.getElementById('file-names').innerHTML = '' + file;
+	document.getElementById('file-names').innerHTML = '' + file;
 }
 
 // Функция верификации e-mail

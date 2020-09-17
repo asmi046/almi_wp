@@ -174,11 +174,11 @@
 						<div class="popup-block__form">
 							<form class="popup__input" action="#" method="get">
 								<div id="file-name" class="popup__upload"  placeholder="File.txt">File.txt</div>
-								<label id="mylabel"><input id="myfile" type="file" name="file" onchange="getFileName ();">Upload file</label>
+								<label id="mylabel"><input id="myfile" type="file" name="file" onchange="getFileName1 ();">Upload file</label>
 							</form>								
 							<form class="popup__input" action="#" method="get">
 								<div id="file-names" class="popup__upload"  placeholder="File.txt">File.txt</div>
-								<label id="mylabel"><input id="myfiles" type="file" name="file" onchange="getFileName ();">Upload file</label>
+								<label id="mylabel"><input id="myfiles" type="file" name="file" onchange="getFileName2 ();">Upload file</label>
 							</form>
 							</div>
 
