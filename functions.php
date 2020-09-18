@@ -3,11 +3,6 @@
 define("COMPANY_NAME", "Almi");
 define("MAIL_RESEND", "info@almiproduct.ru");
 
-//----Удаляем category из УРЛа категорий
-// add_filter( 'category_link', function($a){
-// 	return str_replace( 'category/', '', $a );
-// }, 99 );
-
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php
 include "carbon-fields/carbon-fields-plugin.php";
@@ -207,8 +202,8 @@ function get_qestion() {
 	// Если пост вставлен добавляем параметры
 
 	if (!empty($post_id)) {
-		add_post_meta( $post_id, "q_name", $_REQUEST["name"], true );
-		add_post_meta( $post_id, "q_phone", $_REQUEST["tel"], true );
+		add_post_meta( $post_id, "_q_name", $_REQUEST["name"], true );
+		add_post_meta( $post_id, "_q_phone", $_REQUEST["tel"], true );
 	}
 
 
@@ -225,10 +220,10 @@ function get_qestion() {
 }
 
 
-add_action( 'wp_ajax_send_question', 'send_question' );
-add_action( 'wp_ajax_nopriv_send_question', 'send_question' );
+add_action( 'wp_ajax_set_rev', 'set_rev' );
+add_action( 'wp_ajax_nopriv_set_rev', 'set_rev' );
 
-function send_question() {
+function set_rev() {
   if ( empty( $_REQUEST['nonce'] ) ) {
 	wp_die( '0' );
   }
@@ -236,22 +231,51 @@ function send_question() {
   if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
 	
 	$headers = array(
-	  'From: Сайт Almi <noreply@almi.ru>',
-	  'content-type: text/html',
-	);
-  
-	$headers = array(
-		'From: Сайт '.COMPANY_NAME.' <MAIL_RESEND>',
-		'content-type: text/html',
+		'From: Сайт '.COMPANY_NAME.' <'.MAIL_RESEND.'>',
+		'content-type: form/multipart',
 	);
 
 	add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 	
 	$adr_to_send = carbon_get_theme_option('email_send');
-	$mail_content = 'Заявка со страницы Задать вопрос <br><strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"].' <br/> <strong>Вопрос:</strong> '.$_REQUEST["question"];
-	$mail_them = "<Тема письма>";
+	$mail_content = '<h2>Новый отзыв на сайте Almi</h2><br>'.
+	'<strong>Имя:</strong> '.$_REQUEST["name"].' <br/>'.
+	'<strong>Телефон:</strong> '.$_REQUEST["tel"].' <br/>'. 
+	'<strong>Отзыв:</strong> '.$_REQUEST["rev"].' <br/>'.
+	'<strong>Продукты:</strong> '.$_REQUEST["product"].' <br/>'.
+	'<strong>Оценка товара:</strong> '.$_REQUEST["reiting_prod"].' <br/>'.
+	'<strong>Оценка бренда:</strong> '.$_REQUEST["reiting_brend"].' <br/>';
+	$mail_them = "Отзыв на сайте Almi";
 
-	if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers)) {
+		//  Записываем отзыв в админку
+		$post_data = array(
+			'post_title'    => wp_strip_all_tags( $_REQUEST["name"] ),
+			'post_content'  => $_REQUEST["rev"],
+			'post_status'   => 'publish',
+			'post_author'   => 1,
+			'post_category' => array( 5 )
+		);
+	
+		$post_id = wp_insert_post( $post_data );
+
+		if (!empty($post_id)) {
+			add_post_meta( $post_id, "_stars_product", $_REQUEST["reiting_prod"], true );
+			add_post_meta( $post_id, "_stars_brand", $_REQUEST["reiting_brend"], true );
+			add_post_meta( $post_id, "_name_product", $_REQUEST["product"], true );
+			
+			if (!empty($_REQUEST["img1"])){
+				$url_img1 = get_bloginfo("template_url").'/revimg/'.basename($_REQUEST["img1"]);
+				$img_id1 = media_sideload_image( $url_img1, $post_id, $_REQUEST["name"]."-rev-1", "id" );
+				add_post_meta( $post_id, "_img_1", $img_id1, true );
+			}
+				if (!empty($_REQUEST["img2"])){
+				$url_img2 = get_bloginfo("template_url").'/revimg/'.basename($_REQUEST["img2"]);
+				$img_id2 = media_sideload_image( $url_img2, $post_id, $_REQUEST["name"]."-rev-2", "id" );
+				add_post_meta( $post_id, "_img_2", $img_id2, true );
+			}
+		}
+
+	if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers, array($_REQUEST["img1"],$_REQUEST["img2"]) )) {
 		wp_die(json_encode(array("send" => true )));
 	}
 	else {
@@ -261,6 +285,32 @@ function send_question() {
   } else {
 	wp_die( 'НО-НО-НО!', '', 403 );
   }
+}
+
+
+add_action( 'wp_ajax_main_load_file', 'main_load_file' );
+add_action( 'wp_ajax_nopriv_main_load_file', 'main_load_file' );
+
+function main_load_file() {
+    
+    if ( empty( $_REQUEST['nonce'] ) ) {
+      wp_die( '0' );
+    }
+    
+    if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+
+       $movrez = move_uploaded_file($_FILES['file']['tmp_name'], get_template_directory().'/revimg/'.$_FILES['file']['name']);
+
+       if ($movrez)
+       {
+         wp_die(get_template_directory().'/revimg/'.$_FILES['file']['name']);
+       }
+       else {
+         wp_die( 'При загрузке файла произошла ошибка', '', 403 );
+       }
+    } else {
+      wp_die( 'НО-НО-НО!', '', 403 );
+    }
 }
 	/* Отправка почты
 		

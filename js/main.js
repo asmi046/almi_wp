@@ -29,20 +29,6 @@ $greatShadow.bind('click', hideMenu);
 
 jQuery('.fancybox').fancybox({});
 
-//------Файл открытие и подгрузка имени
-function getFileName1() {
-    var file = document.getElementById('myfile').value;
-    file = file.replace(/\\/g, '/').split('/').pop();
-    document.getElementById('file-name').innerHTML = '' + file;
-
-    
-}
-
-function getFileName2(){
-	var file = document.getElementById('myfiles').value;
-    file = file.replace(/\\/g, '/').split('/').pop();
-	document.getElementById('file-names').innerHTML = '' + file;
-}
 
 // Функция верификации e-mail
 function isEmail(email) {
@@ -53,6 +39,44 @@ function isEmail(email) {
 /*Test*/ 
 
 jQuery(document).ready(function($) {
+
+	//----- Загрузка файла на сервер
+
+	jQuery('input[type=file]').change(function(){
+	    var file_data = jQuery(this).prop('files')[0];
+	    var form_data = new FormData();
+		var file_span = $(this).parent().parent().find('.file_name');
+		var file_name = $(this).parent().parent().find('.popup__upload');
+	    form_data.append('file', file_data);
+	    form_data.append('action', "main_load_file");
+	    form_data.append('nonce', allAjax.nonce);
+
+		jQuery(".lds-ellipsis").css("visibility","visible");
+	    var  jqXHR = jQuery.ajax({      
+	        url: allAjax.ajaxurl,
+	        dataType: 'text',
+	        cache: false,
+	        contentType: false,
+	        processData: false,
+	        data: form_data, 
+	        type: 'post'    
+	    });
+
+	    jqXHR.done(function (responce) {
+			file_span.val(responce);
+			file_name.html(responce.split("/").pop());
+
+	        jQuery(".lds-ellipsis").css("visibility","hidden");
+	    });
+	            
+	    jqXHR.fail(function (responce) {
+	    
+	        if (responce.responseText == "0")
+			file_name.html("<span style = 'color:red;'>Error!</span>");
+	        else
+			file_name.html(responce.responseText);
+	    });
+	});
 	
 	// Сразу маскируем все поля телефонов
 	var inputmask_phone = {"mask": "+7(999)999-99-99"};
@@ -115,6 +139,8 @@ jQuery(document).ready(function($) {
 		var tel = $(this).siblings('input[name=tel]').val();
 		var quest = $(this).siblings('textarea[name=question]').val();
 		
+
+		
 		if (quest == "")
 		{
 			$(this).siblings('textarea[name=question]').css("background-color","#ff91a4");
@@ -152,18 +178,30 @@ jQuery(document).ready(function($) {
 	jQuery("#sendRev").click(function(e){ 
 
 		e.preventDefault();
-		var name = $(this).siblings('input[name=name]').val();
-		var tel = $(this).siblings('input[name=tel]').val();
-		var rev = $(this).siblings('textarea[name=reviews]').val();
-		
-		if (quest == "")
+		var name = $("#popup__bodyS").find('input[name=name]').val();
+		var tel = $("#popup__bodyS").find('input[name=tel]').val();
+		var rev = $("#popup__bodyS").find('textarea[name=reviews]').val();
+		var product = $("#popup__bodyS").find('input[name=product]').val();
+		var ratingP = $("#popup__bodyS").find('input[name=ratingP]:checked').val();
+		var ratingQ = $("#popup__bodyS").find('input[name=ratingQ]:checked').val();
+
+		var file1 = $("#popup__bodyS").find('#file1').val();
+		var file2 = $("#popup__bodyS").find('#file2').val();
+
+		if (name == "")
 		{
-			$(this).siblings('textarea[name=question]').css("background-color","#ff91a4");
+			$("#popup__bodyS").find('input[name=name]').css("background-color","#ff91a4");
+			return;
+		}
+
+		if (rev == "")
+		{
+			$("#popup__bodyS").find('textarea[name=reviews]').css("background-color","#ff91a4");
 			return;
 		}
 
 		if((tel == "")||(tel.indexOf("_")>0)) {
-			$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
+			$("#popup__bodyS").find('input[name=tel]').css("background-color","#ff91a4")
 		} else {
 			var  jqXHR = jQuery.post(
 				allAjax.ajaxurl,
@@ -174,10 +212,11 @@ jQuery(document).ready(function($) {
 					tel: tel,
 					formsubject: "Review form",
 					rev:rev,
-					reiting_prod:"",
-					reiting_brend:"",
-					img1:"",
-					img2:"",
+					reiting_prod:ratingP,
+					reiting_brend:ratingQ,
+					img1:file1,
+					img2:file2,
+					product:product
 				}	
 			);
 					

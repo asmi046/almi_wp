@@ -39,6 +39,8 @@ Container::make('post_meta', 'product', 'Доп поля')
 Container::make('post_meta', 'reviews', 'Параметры отзывы')
 	->show_on_category('otzyvy')
 	->add_fields(array(
+		Field::make( 'checkbox', 'show_rev', 'Показывать отзыв' )
+    		->set_option_value('yes')->set_width(100),
 		Field::make('text', 'stars_product', 'Оценка продукта')
 			->set_width(30),
 		Field::make('text', 'stars_brand', 'Оценка Бренда')

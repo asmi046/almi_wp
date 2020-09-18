@@ -38,7 +38,7 @@
                     // elseif():
                     elseif($is_half):
                         $is_half = 0;?>
-                        <li class="star-half star-track__item"></li>
+                        <li class="star-empty star-track__item"></li>
                     <?php else:?>
                         <li class="star-empty star-track__item"></li>
                     <?php endif; $inc_star++;
