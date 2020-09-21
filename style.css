@@ -1051,6 +1051,8 @@ body.compensate-for-scrollbar {
 
 /* Styling for Small-Screen Devices */
 @media all and (max-height: 576px) {
+
+
   .fancybox-slide {
     padding-left: 6px;
     padding-right: 6px; }
@@ -2156,6 +2158,11 @@ h2 {
  .popup__content-card {
    margin-right: 0; 
   } 
+
+  .box-modal {
+    width:86%;
+  }
+
 }
 
 .popup__image {

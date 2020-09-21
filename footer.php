@@ -6,7 +6,7 @@
                         <span class="brend-link__logo tbc vM">
                             <img src="<?php echo get_template_directory_uri();?>/image/Little_Almi-logo-footer.svg" alt="Little_Almi footer logo">
                         </span>
-                        <a href="<?bloginfo("url");?>" class="brend-link__text tbc vM">
+                        <a href="<?echo get_category_link(7);?>" class="brend-link__text tbc vM">
                             Products Little Almi
                         </a>
                     </div>
@@ -16,7 +16,7 @@
                         <span class="brend-link__logo tbc vM">
                             <img src="<?php echo get_template_directory_uri();?>/image/PET'ALMI-logo-footer.svg" alt="PET'ALMI footer logo">
                         </span>
-                        <a href="<?echo get_category_link(7);?>" class="brend-link__text tbc vM">
+                        <a href="<?bloginfo("url");?>" class="brend-link__text tbc vM">
                             Products PET'ALMI
                         </a>
                     </div>

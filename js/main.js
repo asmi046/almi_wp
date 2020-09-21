@@ -79,7 +79,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Сразу маскируем все поля телефонов
-	var inputmask_phone = {"mask": "+7(999)999-99-99"};
+	var inputmask_phone = {"mask": "+9(999)999-99-99"};
 	jQuery("input[type=tel]").inputmask(inputmask_phone);
 
 	// Типовой скрипт для отправки сообщений на почту
