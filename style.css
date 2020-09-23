@@ -1533,11 +1533,17 @@ h2 {
     background-size: contain;
     background-position: center, center; }
   .nav-panel .main-menu {
-    width: 57%;
+    width: 50%;
     box-sizing: border-box; }
     .nav-panel .main-menu ul {
-      text-align: justify;
-      text-align-last: justify; }
+      /* text-align: justify;
+      text-align-last: justify; 
+      -webkit-text-align-last: justify;  */
+    
+      display: flex;
+      justify-content: space-between;
+
+    }
       .nav-panel .main-menu ul li {
         display: inline-block;
         vertical-align: top; }
@@ -2572,7 +2578,16 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
   #header .middle-decor-elem {
     position: absolute;
     top: 0;
-    width: 70.5%; } }
+    width: 70.5%; } 
+  
+    .contacts-elem .phone-box span {
+      font-size: 20px;
+    }
+
+    .contacts-elem .phone-box {
+      padding: 0 25px 0 67px;
+    }
+  }
 @media screen and (max-width: 1290px) {
   .feedback .feedback__decor.feedback__decor__pets {
     top: 14%;
