@@ -1307,7 +1307,7 @@ h2 {
     background-size: contain;
     background-position: top right; }
     #header .middle-decor-elem.middle-decor-elem__FAQ {
-      background-image: url(img/FAQ-decor-elem.png); }
+      background-image: url(img/FAQ-decor-elem.jpg); }
     #header .middle-decor-elem.middle-decor-elem__reviews {
       background-image: url(img/reviews-decor-elem.png); }
     #header .middle-decor-elem.middle-decor-elem__pd {
@@ -2558,7 +2558,14 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
     left: 0; } }
 @media screen and (max-width: 1385px) {
   .catalog__item__wr {
-    width: 33.33333%; } }
+    width: 33.33333%; } 
+  
+    .feedback .feedback__decor.feedback__decor__pets {
+      right: 51.5%;
+    }
+
+}
+
 @media screen and (max-width: 1300px) {
   .nav-panel .main-menu {
     width: 55%;
@@ -2587,13 +2594,21 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
     .contacts-elem .phone-box {
       padding: 0 25px 0 67px;
     }
+
+    .feedback__decor__pets .spacer {
+      width:94%;
+    }
+
+    .feedback .feedback__decor.feedback__decor__pets {
+      right: 51%;
+    }
   }
 @media screen and (max-width: 1290px) {
-  .feedback .feedback__decor.feedback__decor__pets {
+  /* .feedback .feedback__decor.feedback__decor__pets {
     top: 14%;
     right: 59%;
     height: 120%;
-    width: 53%; } }
+    width: 53%; } } */
 @media screen and (max-width: 1250px) {
   .subfooter {
     display: none; }
