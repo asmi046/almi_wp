@@ -1307,7 +1307,7 @@ h2 {
     background-size: contain;
     background-position: top right; }
     #header .middle-decor-elem.middle-decor-elem__FAQ {
-      background-image: url(img/FAQ-decor-elem.jpg); }
+      background-image: url(img/FAQ-decor-elem.png); }
     #header .middle-decor-elem.middle-decor-elem__reviews {
       background-image: url(img/reviews-decor-elem.png); }
     #header .middle-decor-elem.middle-decor-elem__pd {
@@ -2548,7 +2548,7 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
 
   .feedback .feedback__decor.feedback__decor__kids {
     top: 18%;
-    right: 59%;
+    right: 57%;
     height: 96%;
     width: 44.7%; }
 
@@ -2577,8 +2577,8 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
     margin-left: 0; }
 
   .feedback .feedback__decor.feedback__decor__kids {
-    top: 24%;
-    right: 63%;
+    top: 10%;
+    right: 58%;
     height: 96%;
     width: 44.7%; }
 
@@ -2636,7 +2636,7 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
     position: fixed;
     border-radius: 0;
     top: 0;
-    right: -500px;
+    right: -550px;
     height: 100%;
     min-width: 325px;
     transition: all 300ms; }
@@ -2652,8 +2652,8 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
       display: block;
       width: 100%; }
       .nav-panel .main-menu ul {
-        text-align: left;
-        text-align-last: left; }
+        flex-direction: column;
+      }
         .nav-panel .main-menu ul li {
           display: block;
           vertical-align: top;
@@ -2767,7 +2767,7 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
     display: none; }
 
   .contacts-elem .phone-box {
-    max-width: 260px;
+    max-width: 275px;
     padding-right: 28px; }
     .contacts-elem .phone-box span {
       font-size: 23px;
