@@ -121,7 +121,7 @@ jQuery(document).ready(function($) {
 			);
 					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-				document.location.href = 'https://almi.asmi-studio.ru/stranicza-blagodarnosti/';	
+				document.location.href = 'https://almiproducts.com/stranicza-blagodarnosti/';	
 			});
 					
 			jqXHR.fail(function (responce) {
@@ -163,7 +163,7 @@ jQuery(document).ready(function($) {
 			);
 					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-				document.location.href = 'https://almi.asmi-studio.ru/stranicza-blagodarnosti/';	
+				document.location.href = 'https://almiproducts.com/stranicza-blagodarnosti/';	
 			});
 					
 			jqXHR.fail(function (responce) {
@@ -221,7 +221,7 @@ jQuery(document).ready(function($) {
 			);
 					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-				document.location.href = 'https://almi.asmi-studio.ru/stranicza-blagodarnosti/';	
+				document.location.href = 'https://almiproducts.com/stranicza-blagodarnosti/';	
 			});
 					
 			jqXHR.fail(function (responce) {
@@ -255,7 +255,7 @@ jQuery(document).ready(function($) {
 			);
 					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-				document.location.href = 'https://almi.asmi-studio.ru/stranicza-blagodarnosti/';	
+				document.location.href = 'https://almiproducts.com/stranicza-blagodarnosti/';	
 			});
 					
 			jqXHR.fail(function (responce) {
