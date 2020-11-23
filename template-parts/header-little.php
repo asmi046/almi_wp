@@ -14,11 +14,8 @@
             <h2>Goods for kids</h2>
             <h1>Little ALMI</h1>
             <p>
-                Made of high quality nylon fabric to ensure safety, features the solid zinc alloy swivel snap and metal buckles guarantee extra durability
+                Little ALMI products are designed to bring joy to you and your children. When buying our product, you can be sure that you are buying the best. Safety and comfort are basic requirements in the manufacture of our products.
             </p>
-            <p>
-                Note: the tab on the seatbelt clip is 2cm, please check your buckle's size and compatibility before purchase
-            </p> 
             <a href="#" data-mailmsg="Заявка со страницы <?php the_title();?>" class="btn popup-content">To get a consultation</a>
         </div>
     </div>

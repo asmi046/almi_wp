@@ -21,11 +21,9 @@
              
              ?></h1>
             <p>
-                Made of high quality nylon fabric to ensure safety, features the solid zinc alloy swivel snap and metal buckles guarantee extra durability
+                PET'ALMI products meet the highest requirements in terms of safety and comfort for you and your pets. When buying our product, you can be sure that you are buying the best. Look no further, your pet will thank you.
             </p>
-            <p>
-                Note: the tab on the seatbelt clip is 2cm, please check your buckle's size and compatibility before purchase
-            </p>
+    
             <a href="#" data-mailmsg="Заявка c главной" class="btn popup-content">To get a consultation</a>
         </div>
     </div>
