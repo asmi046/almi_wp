@@ -24,7 +24,7 @@
                 PET'ALMI products meet the highest requirements in terms of safety and comfort for you and your pets. When buying our product, you can be sure that you are buying the best. Look no further, your pet will thank you.
             </p>
     
-            <a href="#" data-mailmsg="Заявка c главной" class="btn popup-content">To get a consultation</a>
+            <a href="#" data-mailmsg="Заявка c главной" class="btn popup-content">Get a consultation</a>
         </div>
     </div>
 </header>
