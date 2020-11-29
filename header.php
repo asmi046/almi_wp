@@ -15,7 +15,8 @@
     <link rel="icon" type="image/svg+xml" sizes="any" href="<? echo get_template_directory_uri();?>/image/pet-almi.svg">
 
     <title><?php wp_title(); ?></title>
-    	
+    <!-- <link rel='preload' id='main-style-font'  href='<? echo get_template_directory_uri();?>/font.css?ver=1.0.10' type='text/css' media='all' /> -->
+
     <?php wp_head();?> 
 	
 </head> 

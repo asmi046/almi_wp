@@ -9,7 +9,7 @@
         <?}?>
         <div class="catalog__item__img cover" >
             <a target="_blank" href = "<?php echo carbon_get_the_post_meta('amazon_link');?>">
-                <img src="<?php echo get_the_post_thumbnail_url($post_id, "large");?>" alt="" class="spacer">
+                <img loading="lazy" src="<?php echo get_the_post_thumbnail_url($post_id, "medium");?>" alt="" class="spacer">
             </a>
         </div>
         <p>
