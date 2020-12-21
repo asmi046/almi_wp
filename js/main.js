@@ -151,6 +151,13 @@ jQuery(document).ready(function($) {
 		$('#popup__body').arcticmodal();
 	});
 
+	$('.almi-modal__popup').click(function(e) {
+		e.preventDefault();
+		var mailmsg = $(this).data('mailmsg');
+		$('#almi-modal .uniSendBtn').attr('data-mailmsg', mailmsg);
+		$('#almi-modal').arcticmodal();
+	});
+
 	jQuery(".uniSendBtn").click(function(e){ 
 
 		e.preventDefault();
@@ -316,4 +323,38 @@ jQuery(document).ready(function($) {
 
 		}
 	});
+
+	jQuery("almidBtn").click(function(e){ 
+
+		e.preventDefault();
+		var name = $(this).siblings('input[name=name]').val();
+		var tel = $(this).siblings('input[name=tel]').val();
+
+		if ((tels == "")||(tel.indexOf("_")>0)) {
+			$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
+		} else {
+			var  jqXHR = jQuery.post(
+				allAjax.ajaxurl,
+				{
+					action: 'almi_buy',		
+					nonce: allAjax.nonce,
+					name: name,
+					tel: tel
+				}	
+			);
+					
+			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
+				document.location.href = 'https://almiproducts.com/stranicza-blagodarnosti/';	
+			});
+					
+			jqXHR.fail(function (responce) {
+				jQuery('#messgeModal #lineMsg').html("Произошла ошибка. Попробуйте позднее.");
+				jQuery('#messgeModal').arcticmodal();
+			}); 
+
+		}
+	});
+
+
+
 });

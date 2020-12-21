@@ -2557,6 +2557,110 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
 }
 
 
+.almi-modal {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px 38px 25px 38px;
+  /*padding: 20px 18px 25px 20px;*/
+  box-sizing: border-box;
+  border-radius: 22px;
+}
+.almi-modal__close {
+  font-size: 16px;
+  top: 15px;
+  right: 18px;
+}
+.almi-modal__image {
+  background-repeat: no-repeat !important;
+  background-position-x: 45% !important;
+  margin-bottom: 20px;
+}
+.almi-modal__dg {
+  max-width: 194px;
+  margin: 0 auto;
+}
+.almi-modal__body {
+/*  max-width: 422px;
+  width: 100%;*/
+}
+.almi-modal__body h3 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28.8px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.almi-modal__form {
+  max-width: 327px;
+  width: 100%;
+  margin: 0 auto;
+}
+.almi-modal__form .inputbox {
+  background: #fff;
+  color: #808080;
+  padding: 0 30px;
+  margin-bottom: 20px;
+  border: 2px solid #E8E8E8;
+}
+.almi-modal__form input::-webkit-input-placeholder
+ {
+  color: #808080;
+}
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.almi-modal__ic-btn {
+  max-width: 245px;
+  width: 100%;
+  margin: 0 auto 19px auto;
+  align-items: center;
+}
+.almi-modal__ic-btn .almidBtn {
+  font-size: 20px;
+  max-width: 133px;
+  width: 100%;
+  box-shadow: none;
+}
+.almi-modal__ic-btn p {
+  font-size: 20px !important;
+  color: #000 !important;
+}
+.almi-modal__ic-fac {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #4267b2;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.almi-modal__ic-fac:hover {
+text-decoration: none;
+}
+.almi-modal__body p {
+  font-size: 16px;
+  line-height: 19.2px;
+  text-align: center;
+  color: #000;
+}
+.almi-modal__private {
+  color: #000;
+  text-decoration: underline;
+}
+
+.almi-modal__popup {
+  color: #fff;
+}
+.almi-modal__popup:hover {
+  text-decoration: none;
+}
+
+
 /*=============================================*/
 @media screen and (max-width: 1400px) {
   .feedback .feedback__decor.feedback__decor__pets {
@@ -2916,6 +3020,10 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
     width: 100px;
     height: 100px; }
 
+  .arcticmodal-container_i2 {
+     padding: 14px 10px; 
+  }
+
   .reviews-page #header {
     padding-bottom: 20px; } }
 @media screen and (max-width: 480px) {
@@ -2967,6 +3075,9 @@ textarea::-webkit-input-placeholder { color: #1A1818; }
       #header .logo__box-small .logo__item:last-child {
         margin-right: auto; }
 
+  .almi-modal {
+    padding: 10px 10px 20px 10px;
+  }
 
   #header .header-content .btn {
     margin: 0 auto;

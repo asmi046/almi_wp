@@ -312,6 +312,7 @@ function main_load_file() {
       wp_die( 'НО-НО-НО!', '', 403 );
     }
 }
+
 	/* Отправка почты
 		
 			$headers = array(
@@ -344,5 +345,46 @@ function main_load_file() {
 		}
 		add_shortcode( 'trueurl', 'true_url_external' );
 	*/
+	
+
+add_action( 'wp_ajax_almi_buy', 'almi_buy' );
+add_action( 'wp_ajax_nopriv_almi_buy', 'almi_buy' );
+
+function almi_buy() {
+  if ( empty( $_REQUEST['nonce'] ) ) {
+	wp_die( '0' );
+  }
+  
+  if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
+	
+	
+  
+	$headers = array(
+		'From: Сайт '.COMPANY_NAME.' <'.MAIL_RESEND.'>',
+		'content-type: text/html',
+	);
+
+
+	add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
+	
+	$adr_to_send = carbon_get_theme_option('email_send');
+	$mail_content = 'Заявка с формы '.$_REQUEST["formsubject"].'<br><strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"];
+	$mail_them = "Заявка с сайта Almi";
+
+	// wp_die( $headers );
+
+	if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers)) {
+		wp_die(json_encode(array("send" => true )));
+	}
+	else {
+		wp_die( 'Ошибка отправки!', '', 403 );
+	}
+	
+  } else {
+	wp_die( 'НО-НО-НО!', '', 403 );
+  }
+}
+
+
 	
 ?>

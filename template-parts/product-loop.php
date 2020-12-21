@@ -52,7 +52,7 @@
         </ul>
         <span class="catalog__item__price db">$<?php echo carbon_get_the_post_meta('price');?></span>
         <div class="catalog__link-box">
-            Buy on
+            Buy <a href="#" class="almi-modal__popup">on</a>
             <a target="_blank" href="<?php echo carbon_get_the_post_meta('amazon_link');?>" class="amazon-link"></a>
         </div>
     </div>
