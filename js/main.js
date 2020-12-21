@@ -324,11 +324,14 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	jQuery("almidBtn").click(function(e){ 
+	jQuery(".almidBtn").click(function(e){ 
 
 		e.preventDefault();
-		var name = $(this).siblings('input[name=name]').val();
-		var tel = $(this).siblings('input[name=tel]').val();
+		var name = $(this).parent().siblings('input[name=name]').val();
+		var tel = $(this).parent().siblings('input[name=tel]').val();
+
+		console.log(name);
+		console.log(tel);
 
 		if ((tels == "")||(tel.indexOf("_")>0)) {
 			$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
