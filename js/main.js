@@ -153,8 +153,9 @@ jQuery(document).ready(function($) {
 
 	$('.almi-modal__popup').click(function(e) {
 		e.preventDefault();
-		var mailmsg = $(this).data('mailmsg');
-		$('#almi-modal .uniSendBtn').attr('data-mailmsg', mailmsg);
+		var amzlnk = $(this).data('amzlnk');
+		console.log(amzlnk);
+		$('#almi-modal a.almidBtn').attr('data-amzlnk', amzlnk);
 		$('#almi-modal').arcticmodal();
 	});
 
@@ -327,6 +328,8 @@ jQuery(document).ready(function($) {
 	jQuery(".almidBtn").click(function(e){ 
 
 		e.preventDefault();
+		var lnkTo = $(this).data("amzlnk");
+
 		var name = $(this).parent().siblings('input[name=name]').val();
 		var email = $(this).parent().siblings('input[name=email]').val();
 
@@ -347,7 +350,7 @@ jQuery(document).ready(function($) {
 			);
 					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
-				document.location.href = 'https://almiproducts.com/stranicza-blagodarnosti/';	
+				document.location.href = lnkTo;	
 				// document.cookie = "DataSendet", "User send data", time()+5, "/", "almiproducts.com, 1;"
 			});
 					
