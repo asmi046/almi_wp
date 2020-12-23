@@ -55,12 +55,13 @@
             Buy on
             <?php
             if (!empty($_COOKIE["DataSendet"])) {
-            echo '<a target="_blank" href="'.carbon_get_the_post_meta("amazon_link").'" class="amazon-link"></a>';
-           }
-           else {
-            echo '<a href="#" class="almi-modal__popup amazon-link"></a>';
-           } 
-           ?>
+            ?>
+                <a target="_blank" href="<?echo carbon_get_the_post_meta("amazon_link")?>" class="amazon-link"></a>';
+            <?
+                } else  {
+            ?>
+                <a href="#" class="almi-modal__popup amazon-link"></a>
+           <? } ?>
 
        </div>
    </div>
