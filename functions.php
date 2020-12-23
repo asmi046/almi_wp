@@ -1,7 +1,7 @@
 <?php
 
 define("COMPANY_NAME", "Almi");
-define("MAIL_RESEND", "info@almiproduct.ru");
+define("MAIL_RESEND", "rudikov-web@yandex.ru");
 
 //----Подключене carbon fields
 //----Инструкции по подключению полей см. в комментариях themes-fields.php
@@ -81,6 +81,7 @@ add_action( 'wp_enqueue_scripts', 'my_assets' );
 			'nonce'   => wp_create_nonce( 'NEHERTUTLAZIT' )
 		) );
 	}
+
 
 	// Заготовка для вызова ajax
 	
@@ -345,7 +346,6 @@ function main_load_file() {
 		}
 		add_shortcode( 'trueurl', 'true_url_external' );
 	*/
-	
 
 add_action( 'wp_ajax_almi_buy', 'almi_buy' );
 add_action( 'wp_ajax_nopriv_almi_buy', 'almi_buy' );
@@ -356,7 +356,7 @@ function almi_buy() {
   }
   
   if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
-	
+	setcookie("DataSendet", "User send data", time()+35, "/", "almiproducts.com", 1);
 	
   
 	$headers = array(

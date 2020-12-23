@@ -8,7 +8,7 @@
  *
  * Copyright 2007, 2018 Lokesh Dhakar
  * Released under the MIT license
- * https://github.com/lokesh/lightbox2/blob/master/LICENSE
+ * https://github.com/lokesh/lightbox2/blob/master/LICENSE 
  *
  * @preserve
  */
@@ -328,13 +328,13 @@ jQuery(document).ready(function($) {
 
 		e.preventDefault();
 		var name = $(this).parent().siblings('input[name=name]').val();
-		var tel = $(this).parent().siblings('input[name=tel]').val();
+		var email = $(this).parent().siblings('input[name=email]').val();
 
 		console.log(name);
-		console.log(tel);
+		console.log(email);
 
-		if ((tels == "")||(tel.indexOf("_")>0)) {
-			$(this).siblings('input[name=tel]').css("background-color","#ff91a4")
+		if ((email == "")||(email.indexOf("_")>0)) {
+			$(this).parent().siblings('input[name=email]').css("background-color","#ff91a4")
 		} else {
 			var  jqXHR = jQuery.post(
 				allAjax.ajaxurl,
@@ -342,12 +342,13 @@ jQuery(document).ready(function($) {
 					action: 'almi_buy',		
 					nonce: allAjax.nonce,
 					name: name,
-					tel: tel
+					email: email
 				}	
 			);
 					
 			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
 				document.location.href = 'https://almiproducts.com/stranicza-blagodarnosti/';	
+				// document.cookie = "DataSendet", "User send data", time()+5, "/", "almiproducts.com, 1;"
 			});
 					
 			jqXHR.fail(function (responce) {
