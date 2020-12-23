@@ -60,7 +60,7 @@
             <?
                 } else  {
             ?>
-                <a href="#" class="almi-modal__popup amazon-link"></a>
+                <a href="#" data-amzlnk = "<?echo carbon_get_the_post_meta("amazon_link")?>" class="almi-modal__popup amazon-link"></a>
            <? } ?>
 
        </div>
