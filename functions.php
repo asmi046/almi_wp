@@ -1,5 +1,11 @@
 <?php
 
+//SetCookie("datasendet", "User send data",  0, "/", "almiproducts.com");
+
+//error_reporting(E_ALL);
+//ini_set('display_startup_errors', 1);
+//ini_set('display_errors', '1');
+
 define("COMPANY_NAME", "Almi");
 define("MAIL_RESEND", "rudikov-web@yandex.ru");
 
@@ -356,7 +362,7 @@ function almi_buy() {
   }
   
   if ( check_ajax_referer( 'NEHERTUTLAZIT', 'nonce', false ) ) {
-	setcookie("DataSendet", "User send data", time()+35, "/", "almiproducts.com", 1);
+	
 	
   
 	$headers = array(
@@ -368,12 +374,20 @@ function almi_buy() {
 	add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 	
 	$adr_to_send = carbon_get_theme_option('email_send');
-	$mail_content = 'Заявка с формы '.$_REQUEST["formsubject"].'<br><strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["tel"];
+	$mail_content = 'Заявка с формы '.$_REQUEST["formsubject"].'<br><strong>Имя:</strong> '.$_REQUEST["name"].' <br/> <strong>Телефон:</strong> '.$_REQUEST["email"];
 	$mail_them = "Заявка с сайта Almi";
 
-	// wp_die( $headers );
+	global $wpdb;
+		
+	$wpdb->insert(
+		'almi_contacts',
+		array( 'type' => 'mail', 'name' => $_REQUEST["name"], 'mail' => $_REQUEST["email"] ),
+		array( '%s', '%s', '%s' )
+	);
 
 	if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers)) {
+
+
 		wp_die(json_encode(array("send" => true )));
 	}
 	else {

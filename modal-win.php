@@ -13,12 +13,12 @@
   				</div>
   			</div>
   			<h3>
-  				Join the Elvie conversation and receive
+  				Join the Almi conversation and receive
   				newsletters, offers, & invitations
   			</h3>
   			<form class="almi-modal__form" action="">
   				<input type="text" class="inputbox" name="name" placeholder="Name">
-  				<input type="tel" class="inputbox" name="tel" placeholder="*E-mail">
+  				<input type="email" class="inputbox" name="email" placeholder="*E-mail">
   				<div class="almi-modal__ic-btn d-flex">
   					<a href="#" class="btn almidBtn">Send</a>
   					<p>or</p>

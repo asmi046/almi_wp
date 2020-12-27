@@ -8,7 +8,9 @@
             </div>
             <?}?>
             <div class="catalog__item__img cover" >
-                <a target="_blank" href = "<?php echo carbon_get_the_post_meta('amazon_link');?>">
+                <a target="_blank" href = "<?php echo carbon_get_the_post_meta('amazon_link');?>"
+                    class  = "<?  if (empty($_COOKIE["datasendet"])) echo "almi-modal__popup"; ?>"
+                >
                     <img loading="lazy" src="<?php echo get_the_post_thumbnail_url($post_id, "medium");?>" alt="" class="spacer">
                 </a>
             </div>
@@ -54,7 +56,7 @@
         <div class="catalog__link-box">
             Buy on
             <?php
-            if (!empty($_COOKIE["DataSendet"])) {
+            if (!empty($_COOKIE["datasendet"])) {
             ?>
                 <a target="_blank" href="<?echo carbon_get_the_post_meta("amazon_link")?>" class="amazon-link"></a>';
             <?

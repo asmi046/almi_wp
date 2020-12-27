@@ -349,9 +349,10 @@ jQuery(document).ready(function($) {
 				}	
 			);
 					
-			jqXHR.done(function (responce) {  //Всегда при удачной отправке переход для страницу благодарности
+			jqXHR.done(function (responce) {  
+				document.cookie = "datasendet=123; max-age=8640000";	
 				document.location.href = lnkTo;	
-				// document.cookie = "DataSendet", "User send data", time()+5, "/", "almiproducts.com, 1;"
+	
 			});
 					
 			jqXHR.fail(function (responce) {
