@@ -1,7 +1,7 @@
 ﻿/*
 Theme Name: Almi-Product
 Theme URI: 
-Author: Asmi-Studio
+Author: Asmi-Studio 
 Author URI: 
 Description: Almi-Product
 Version: 1.0.1
@@ -1327,6 +1327,8 @@ h2 {
     background-position: top right; }
     #header .middle-decor-elem.middle-decor-elem__FAQ {
       background-image: url(img/FAQ-decor-elem.jpg); }
+    #header .middle-decor-elem.middle-decor-elem__text {
+      background-image: url(img/text-decor-elem.jpg); }
     #header .middle-decor-elem.middle-decor-elem__reviews {
       background-image: url(img/reviews-decor-elem.jpg); }
     #header .middle-decor-elem.middle-decor-elem__pd {
@@ -1428,7 +1430,8 @@ h2 {
   #footer .footer-menu {
     padding-top: 29px; }
     #footer .footer-menu ul {
-      max-width: 362px;
+      /*max-width: 362px;*/
+      max-width: 422px;
       margin: 0 auto;
       font-size: 0; }
       #footer .footer-menu ul li {
@@ -2164,6 +2167,45 @@ h2 {
 	margin-left: 3%;
   width: 47%;
 }
+
+.text-box h2 {
+  font-size: 33px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.text-box h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.text-box p {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+.text-box ul li {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 13px;
+  padding-left: 20px;
+}
+.text-box ul li:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    float: left;
+    background: #000;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.text-box__btn {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+
 
 @media (max-width: 350px) {
 .popup__content {

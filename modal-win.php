@@ -27,7 +27,7 @@
   			</form>
   			<p>
   				To see how we may use yor information, <br>
-  				take a look at our <a href="#" class="almi-modal__private">Private Policy.</a>
+  				take a look at our <a href="<?php echo get_permalink(319)?>" class="almi-modal__private">Private Policy.</a>
   			</p>
   		</div>
   	</div>
