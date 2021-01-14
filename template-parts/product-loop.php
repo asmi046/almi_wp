@@ -58,7 +58,7 @@
             <?php
             if (!empty($_COOKIE["datasendet"])) {
             ?>
-                <a target="_blank" href="<?echo carbon_get_the_post_meta("amazon_link")?>" class="amazon-link"></a>';
+                <a target="_blank" href="<?echo carbon_get_the_post_meta("amazon_link")?>" class="amazon-link"></a>
             <?
                 } else  {
             ?>

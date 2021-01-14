@@ -21,9 +21,11 @@
   				<input type="email" class="inputbox" name="email" placeholder="*E-mail">
   				<div class="almi-modal__ic-btn d-flex">
   					<a href="#" class="btn almidBtn">Send</a>
-  					<p>or</p>
-  					<a href="#" class="almi-modal__ic-fac">f</a>
+  					<!-- <p>or</p>
+  					<a href="#" class="almi-modal__ic-fac">f</a> -->
   				</div>
+
+				  <div class="fb-like" data-href="https://www.facebook.com/petalmi/" data-width="105px" data-layout="box_count" data-action="like" data-size="small" data-share="true"></div>
   			</form>
   			<p>
   				To see how we may use yor information, <br>

@@ -22,13 +22,8 @@
 </head> 
 <body>
 
-<!-- Скрипт для вывода яндекс карт Подключать непосредственно перед вызовом скрипта инициализации карты-->
-<!-- <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
+<div id="fb-root"></div>
 
-<!-- Меню -->
-<?php //wp_nav_menu( array('menu' => 'Главное меню', 'container' => false )); ?>
-
-<!-- Подключение  модальных окон-->
-
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v9.0&appId=474708146744751&autoLogAppEvents=1" nonce="mHlwuqbY"></script>
 
 

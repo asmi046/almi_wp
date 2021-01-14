@@ -156,7 +156,12 @@ jQuery(document).ready(function($) {
 		var amzlnk = $(this).data('amzlnk');
 		console.log(amzlnk);
 		$('#almi-modal a.almidBtn').attr('data-amzlnk', amzlnk);
-		$('#almi-modal').arcticmodal();
+		$('#almi-modal .fb-like').attr('data-amzlnk', amzlnk);
+		$('#almi-modal').arcticmodal({
+			afterClose: function(data, el) {
+				document.location.href = amzlnk;	
+			}
+		});
 	});
 
 	jQuery(".uniSendBtn").click(function(e){ 
@@ -323,6 +328,13 @@ jQuery(document).ready(function($) {
 			}); 
 
 		}
+	});
+
+	jQuery(".fb-like").click(function(e){ 
+		alert("!!!!!");
+		var lnkTo = $(this).data("amzlnk");
+		document.cookie = "datasendet=123; max-age=8640000";	
+		document.location.href = lnkTo;	
 	});
 
 	jQuery(".almidBtn").click(function(e){ 
