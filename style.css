@@ -5,7 +5,7 @@ Author: Asmi-Studio
 Author URI: 
 Description: Almi-Product
 Version: 1.0.1
-Tags: pet,almi
+Tags: pet,almi 
 */
 
 
@@ -2170,11 +2170,13 @@ h2 {
 
 .text-box h2 {
   font-size: 33px;
+  line-height: 38px;
   margin-bottom: 20px;
   margin-top: 30px;
 }
 .text-box h3 {
   font-size: 30px;
+  line-height: 33px;
   margin-bottom: 20px;
   margin-top: 30px;
 }
