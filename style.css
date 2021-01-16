@@ -2115,7 +2115,8 @@ h2 {
   	color: #EB4125;
     padding-bottom: 5px; }
     .contacts-table td a {
-      color: #1A1718; }
+      color: #1A1718;
+      color: #EB4125;}
       .contacts-table td a.link {
         color: #EB4125; }
 
